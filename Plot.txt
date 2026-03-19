@@ -57,19 +57,31 @@ Main Quest Name: "The Riddle Keeper's Test"
 Introduction Dialogue:
 Echo: (His eyes twinkle as the player approaches). "Welcome, traveler. I am the keeper of words, the guardian of meaning. Our island thrives on communication, on stories, on the exchange of ideas. But lately, confusion has spread. People misunderstand each other. Arguments flare over nothing. The threads of logic have become tangled. I believe this chaos is a test—a riddle that must be solved. Will you help me untangle these knots by solving a few puzzles? Clear thinking can restore clear communication."
 
-(This is the logic quiz. The player is presented with 3-5 puzzles. Examples:)
+(This is the logic quiz. The player is presented with 3-5 puzzles.)
 
-Riddle: "I speak all languages, but have no mouth. I hold all stories, but have no hands. I can answer any question, but only if asked correctly. What am I?"
+Puzzle 1: The Bridge Crossing
+Four people need to cross a bridge at night. They have one flashlight, and at most two can cross at a time. Their crossing times are: 1 min, 2 min, 7 min, and 10 min. When two cross together, they move at the slower person’s pace.
+Question: What is the minimum time needed for all four to cross?
+Answer: Strategy is to minimize time by having the fastest people shuttle the flashlight:
+  Person 1 & Person 2 cross (2 min).
+  Person 1 returns (1 min).
+  Person 7 & Person 10 cross (10 min).
+  Person 2 returns (2 min).
+  Person 1 & Person 2 cross again (2 min).
+  Total = 17 minutes.
 
-Answer: A book / A library / Knowledge
+Puzzle 2: The Colored Hats
+Five people are lined up, each wearing a hat that is either red or blue. They can only see the hats in front of them, not their own. Starting from the back, each must guess their hat color. If they guess correctly, they survive.
+Question: What strategy ensures that at least four survive?
+Answer: Use parity strategy:
+  The last person (who sees all hats) announces a color so that the total number of red hats is even (or odd, depending on agreed rule).
+  Each subsequent person can deduce their own hat color based on what they see and the parity rule.
+  This guarantees that at least 4 people guess correctly.
 
-Logic Puzzle: "A room contains four corners. Each corner has a cat. Each cat sees three cats. How many cats are in the room?"
-
-Answer: Four. (Each cat sees the other three.)
-
-Word Puzzle: "What word becomes shorter when you add two letters to it?"
-
-Answer: "Short" (add 'er' to get "shorter")
+Puzzle 3: The Two Doors
+You’re in a room with two doors. One leads to freedom, the other to certain doom. Each door has a guard: one always tells the truth, the other always lies. You can ask one question to one guard.
+Question: What do you ask?
+Answer: Ask: “If I asked the other guard which door leads to freedom, what would he say?” Then choose the opposite door.
 
 Main Quest Resolution:
 Echo: (He laughs warmly). "Excellent! Your mind is sharp, your reasoning clear. You've untangled the threads. The third star above the central island now burns bright. Thank you, thoughtful traveler. The storm ahead may soon clear for you."
