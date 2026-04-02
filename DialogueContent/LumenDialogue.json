@@ -1,0 +1,49 @@
+{
+  "startNodeId": "start",
+  "nodes": [
+    {
+      "nodeId": "start",
+      "lines": [
+        {
+          "speakerName": "Lumen",
+          "text": "Ah... a new presence. I feel you there. Don't be startled by my blindness—I see more than you might think. Our island was not always dark. Long ago, we had the most beautiful sunsets. Then the Great Dimming came. Our light source, the Luminous Heart, was hidden deep within the maze. Without it, we've lived in shadow ever since. Some say the maze is impossible to navigate in darkness. But I feel something different about you. A light within. Will you try to find the Luminous Heart for us?",
+          "hasChoice": true,
+          "choices": [
+            {
+              "choiceText": "I will help find the Luminous Heart.",
+              "nextNodeId": "accepted",
+              "humanityModifier": 1
+            },
+            {
+              "choiceText": "Not yet. I need more time.",
+              "nextNodeId": "wait",
+              "humanityModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "accepted",
+      "lines": [
+        {
+          "speakerName": "Lumen",
+          "text": "Thank you, traveler. Follow the faint sounds and the soft glow. The maze will resist you, but the Heart is waiting for someone willing to keep going.",
+          "hasChoice": false,
+          "choices": []
+        }
+      ]
+    },
+    {
+      "nodeId": "wait",
+      "lines": [
+        {
+          "speakerName": "Lumen",
+          "text": "That is all right. Darkness is patient. Return when you are ready to bring light back to us.",
+          "hasChoice": false,
+          "choices": []
+        }
+      ]
+    }
+  ]
+}
