@@ -10,26 +10,17 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private KeyCode interactKey = KeyCode.E;
 
     [Header("Animation")]
-    [SerializeField] private string moveXParameter = "MoveX";
-    [SerializeField] private string moveYParameter = "MoveY";
-    [SerializeField] private string lastMoveXParameter = "LastMoveX";
-    [SerializeField] private string lastMoveYParameter = "LastMoveY";
-    [SerializeField] private string isMovingParameter = "IsMoving";
+    [SerializeField] private Animator animator;
 
     private Rigidbody2D rb;
-    private Animator animator;
-    private SpriteRenderer spriteRenderer;
 
     private Vector2 moveInput;
-    private Vector2 lastMoveDirection = Vector2.down;
     private readonly HashSet<IInteractable> interactablesInRange = new HashSet<IInteractable>();
     private IInteractable currentInteractable;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
 
         if (rb == null)
         {
@@ -37,10 +28,20 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
+    }
+
     private void Update()
     {
         ReadMovementInput();
-        UpdateAnimation();
+        HandleAnimations();
 
         if (Input.GetKeyDown(interactKey) && currentInteractable != null)
         {
@@ -55,40 +56,44 @@ public class PlayerControl : MonoBehaviour
             return;
         }
 
-        rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
+        rb.velocity = moveInput.normalized * moveSpeed;
     }
 
     private void ReadMovementInput()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
-
-        moveInput = new Vector2(horizontal, vertical);
-        if (moveInput.sqrMagnitude > 1f)
-        {
-            moveInput.Normalize();
-        }
-
-        if (moveInput != Vector2.zero)
-        {
-            lastMoveDirection = moveInput;
-        }
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.y = Input.GetAxisRaw("Vertical");
     }
 
-    private void UpdateAnimation()
+    private void HandleAnimations()
     {
-        if (animator != null)
-        {
-            animator.SetFloat(moveXParameter, moveInput.x);
-            animator.SetFloat(moveYParameter, moveInput.y);
-            animator.SetFloat(lastMoveXParameter, lastMoveDirection.x);
-            animator.SetFloat(lastMoveYParameter, lastMoveDirection.y);
-            animator.SetBool(isMovingParameter, moveInput != Vector2.zero);
-        }
+        if (animator == null) return;
 
-        if (spriteRenderer != null && moveInput.x != 0f)
+        // 1. Prioritize Horizontal (X)
+        if (moveInput.x != 0)
         {
-            spriteRenderer.flipX = moveInput.x < 0f;
+            animator.SetBool("isRunningX", true);
+            animator.SetBool("isRunningFront", false);
+            animator.SetBool("isRunningBack", false);
+
+            // Flip sprite: 1 for right, -1 for left
+            transform.localScale = new Vector3(Mathf.Sign(moveInput.x), 1, 1);
+        }
+        // 2. Vertical (Y)
+        else if (moveInput.y != 0)
+        {
+            animator.SetBool("isRunningX", false);
+
+            // If moving UP (Y > 0), show BACK. If moving DOWN (Y < 0), show FRONT.
+            animator.SetBool("isRunningBack", moveInput.y > 0);
+            animator.SetBool("isRunningFront", moveInput.y < 0);
+        }
+        // 3. Idle
+        else
+        {
+            animator.SetBool("isRunningX", false);
+            animator.SetBool("isRunningFront", false);
+            animator.SetBool("isRunningBack", false);
         }
     }
 
