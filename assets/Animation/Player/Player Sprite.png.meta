@@ -1,0 +1,576 @@
+fileFormatVersion: 2
+guid: a993b5ad0047d410c8e09472f5857e3f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 80
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 579
+        width: 89
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12dd4e9e87c9448f482444b8f68aa070
+      internalID: 2070243518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 582
+        width: 88
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba9fe2613a934943a62dde9daacba66
+      internalID: -1775137558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 581
+        width: 87
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0fe92bcd67b456da5a1a680903fb10
+      internalID: 1374503854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 399
+        width: 95
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26add0d19ca0349a49ab679d1c0373bf
+      internalID: 2011543526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 398
+        width: 94
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b6c566fbc3d4ac690c3a4063ae6449
+      internalID: 1432890875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 399
+        width: 94
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c05876001c0e4079b248129de519161
+      internalID: -290049643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 399
+        width: 95
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725fdc464421c4a6d88fb3215af39bce
+      internalID: -1754045565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 204
+        width: 86
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bb0c9edc44e41cbaf4fb40ad74e10f
+      internalID: 643437581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 208
+        width: 79
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b26feba94b34ed6afc26a3cb38dad3
+      internalID: -1796995845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 204
+        width: 78
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a7e33d9b84145c0a7ba8e1fa999e57
+      internalID: 782210730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 204
+        width: 77
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d86c88acbc764160a2f012e8513c246
+      internalID: -1699013476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 204
+        width: 77
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fff8496be9d84d3a9096a8f34b4b534
+      internalID: -557082420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 205
+        width: 77
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a5ea665453824bb4a20fd79e1e70ae8
+      internalID: 820412052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 208
+        width: 81
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a8288561de0d4e96af9c92f32c7dc02
+      internalID: 1932058747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 205
+        width: 85
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f17cfa8b380b04723b2d43ec50f6d54b
+      internalID: -174042366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 17
+        width: 90
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71e16eb58f79c47c78ff4c10fbd390c0
+      internalID: -764972337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 17
+        width: 89
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc62588132ae4ea9ad4be15f2b8612f
+      internalID: -2054198049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 17
+        width: 89
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c792a5291b6490c8f56200440e2cff
+      internalID: -1258349165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 17
+        width: 89
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56727875b83bd4b50824b7e6e0fc29c1
+      internalID: 90220852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 17
+        width: 89
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b3ad3490aec4840ae62ec4b8642f05
+      internalID: 605418763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: seeker_boy_spriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 17
+        width: 90
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c52607b6b154c96a87aaf23a6fedc2
+      internalID: -629565620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      seeker_boy_spriteSheet_0: 2070243518
+      seeker_boy_spriteSheet_1: -1775137558
+      seeker_boy_spriteSheet_10: -1699013476
+      seeker_boy_spriteSheet_11: -557082420
+      seeker_boy_spriteSheet_12: 820412052
+      seeker_boy_spriteSheet_13: 1932058747
+      seeker_boy_spriteSheet_14: -174042366
+      seeker_boy_spriteSheet_15: -764972337
+      seeker_boy_spriteSheet_16: -2054198049
+      seeker_boy_spriteSheet_17: -1258349165
+      seeker_boy_spriteSheet_18: 90220852
+      seeker_boy_spriteSheet_19: 605418763
+      seeker_boy_spriteSheet_2: 1374503854
+      seeker_boy_spriteSheet_20: -629565620
+      seeker_boy_spriteSheet_3: 2011543526
+      seeker_boy_spriteSheet_4: 1432890875
+      seeker_boy_spriteSheet_5: -290049643
+      seeker_boy_spriteSheet_6: -1754045565
+      seeker_boy_spriteSheet_7: 643437581
+      seeker_boy_spriteSheet_8: -1796995845
+      seeker_boy_spriteSheet_9: 782210730
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
