@@ -53,6 +53,14 @@ public class PlayerControl : MonoBehaviour
 
     private void Update()
     {
+        // Freeze player controls while a dialogue is open.
+        if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive)
+        {
+            moveInput = Vector2.zero;
+            HandleAnimations();
+            return;
+        }
+
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
 
@@ -82,7 +90,7 @@ public class PlayerControl : MonoBehaviour
         bool runningFront = false;
         bool runningBack = false;
 
-        // Use horizontal first, then vertical to match top-down directional sprites.
+        // Horizontal movement has priority over vertical to match the controller setup.
         if (moveInput.x < -InputDeadzone)
         {
             runningLeft = true;
@@ -108,7 +116,7 @@ public class PlayerControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        IInteractable interactable = other.GetComponent<IInteractable>();
+        IInteractable interactable = GetInteractableFromCollider(other);
         if (interactable == null)
         {
             return;
@@ -123,7 +131,7 @@ public class PlayerControl : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        IInteractable interactable = other.GetComponent<IInteractable>();
+        IInteractable interactable = GetInteractableFromCollider(other);
         if (interactable == null)
         {
             return;
@@ -159,6 +167,17 @@ public class PlayerControl : MonoBehaviour
         }
 
         currentInteractable = bestCandidate;
+    }
+
+    private static IInteractable GetInteractableFromCollider(Collider2D other)
+    {
+        IInteractable interactable = other.GetComponent<IInteractable>();
+        if (interactable != null)
+        {
+            return interactable;
+        }
+
+        return other.GetComponentInParent<IInteractable>();
     }
 
     private void OnDisable()

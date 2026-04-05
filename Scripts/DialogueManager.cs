@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour
     
     // Singleton for easy access
     public static DialogueManager Instance { get; private set; }
+    public bool IsDialogueActive => dialoguePanel != null && dialoguePanel.activeSelf;
     
     private void Awake()
     {
