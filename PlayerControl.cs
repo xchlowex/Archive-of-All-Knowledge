@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+    private static readonly int IsRunningX = Animator.StringToHash("isRunningX");
+    private static readonly int IsRunningLeft = Animator.StringToHash("isRunningLeft");
+    private static readonly int IsRunningFront = Animator.StringToHash("isRunningFront");
+    private static readonly int IsRunningBack = Animator.StringToHash("isRunningBack");
+
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 5f;
 
@@ -13,35 +18,46 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private Animator animator;
 
     private Rigidbody2D rb;
-
     private Vector2 moveInput;
+    private const float InputDeadzone = 0.01f;
+
     private readonly HashSet<IInteractable> interactablesInRange = new HashSet<IInteractable>();
     private IInteractable currentInteractable;
 
-    private void Awake()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
         if (rb == null)
         {
             Debug.LogError("PlayerControl requires a Rigidbody2D component.");
+            enabled = false;
+            return;
         }
-    }
-
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
 
         if (animator == null)
         {
             animator = GetComponent<Animator>();
         }
+
+        if (animator == null)
+        {
+            animator = GetComponentInChildren<Animator>();
+        }
+
+        if (animator == null)
+        {
+            Debug.LogWarning("PlayerControl could not find an Animator on this object or its children.");
+        }
     }
 
     private void Update()
     {
-        ReadMovementInput();
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.y = Input.GetAxisRaw("Vertical");
+
         HandleAnimations();
+        RefreshCurrentInteractable();
 
         if (Input.GetKeyDown(interactKey) && currentInteractable != null)
         {
@@ -51,50 +67,43 @@ public class PlayerControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (rb == null)
-        {
-            return;
-        }
-
         rb.velocity = moveInput.normalized * moveSpeed;
-    }
-
-    private void ReadMovementInput()
-    {
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
     }
 
     private void HandleAnimations()
     {
-        if (animator == null) return;
-
-        // 1. Prioritize Horizontal (X)
-        if (moveInput.x != 0)
+        if (animator == null)
         {
-            animator.SetBool("isRunningX", true);
-            animator.SetBool("isRunningFront", false);
-            animator.SetBool("isRunningBack", false);
+            return;
+        }
 
-            // Flip sprite: 1 for right, -1 for left
-            transform.localScale = new Vector3(Mathf.Sign(moveInput.x), 1, 1);
-        }
-        // 2. Vertical (Y)
-        else if (moveInput.y != 0)
-        {
-            animator.SetBool("isRunningX", false);
+        bool runningX = false;
+        bool runningLeft = false;
+        bool runningFront = false;
+        bool runningBack = false;
 
-            // If moving UP (Y > 0), show BACK. If moving DOWN (Y < 0), show FRONT.
-            animator.SetBool("isRunningBack", moveInput.y > 0);
-            animator.SetBool("isRunningFront", moveInput.y < 0);
-        }
-        // 3. Idle
-        else
+        // Use horizontal first, then vertical to match top-down directional sprites.
+        if (moveInput.x < -InputDeadzone)
         {
-            animator.SetBool("isRunningX", false);
-            animator.SetBool("isRunningFront", false);
-            animator.SetBool("isRunningBack", false);
+            runningLeft = true;
         }
+        else if (moveInput.x > InputDeadzone)
+        {
+            runningX = true;
+        }
+        else if (moveInput.y > InputDeadzone)
+        {
+            runningBack = true;
+        }
+        else if (moveInput.y < -InputDeadzone)
+        {
+            runningFront = true;
+        }
+
+        animator.SetBool(IsRunningX, runningX);
+        animator.SetBool(IsRunningLeft, runningLeft);
+        animator.SetBool(IsRunningFront, runningFront);
+        animator.SetBool(IsRunningBack, runningBack);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -123,30 +132,44 @@ public class PlayerControl : MonoBehaviour
         if (interactablesInRange.Remove(interactable))
         {
             interactable.HidePrompt();
-
-            if (currentInteractable == interactable)
-            {
-                currentInteractable = null;
-                RefreshCurrentInteractable();
-            }
+            RefreshCurrentInteractable();
         }
     }
 
     private void RefreshCurrentInteractable()
     {
-        currentInteractable = null;
+        interactablesInRange.RemoveWhere(item => item == null);
+
+        IInteractable bestCandidate = null;
+        float bestDistanceSqr = float.MaxValue;
 
         foreach (IInteractable interactable in interactablesInRange)
         {
-            currentInteractable = interactable;
-            break;
+            if (interactable is not Component component)
+            {
+                continue;
+            }
+
+            float distanceSqr = (component.transform.position - transform.position).sqrMagnitude;
+            if (distanceSqr < bestDistanceSqr)
+            {
+                bestDistanceSqr = distanceSqr;
+                bestCandidate = interactable;
+            }
         }
+
+        currentInteractable = bestCandidate;
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDisable()
     {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(transform.position, Vector3.one);
+        foreach (IInteractable interactable in interactablesInRange)
+        {
+            interactable?.HidePrompt();
+        }
+
+        interactablesInRange.Clear();
+        currentInteractable = null;
     }
 }
 

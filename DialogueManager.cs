@@ -145,6 +145,12 @@ public class DialogueManager : MonoBehaviour
     
     public void ContinueDialogue()
     {
+        if (currentNode == null || currentNode.lines == null)
+        {
+            EndDialogue();
+            return;
+        }
+
         if (isTyping)
         {
             // Skip typing
@@ -179,7 +185,7 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
         // Quick continue with mouse click or spacebar
-        if (dialoguePanel.activeSelf && Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+        if (dialoguePanel.activeSelf && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)))
         {
             ContinueDialogue();
         }
