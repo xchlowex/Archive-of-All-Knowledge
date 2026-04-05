@@ -101,6 +101,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame (Better for Input)
     void Update()
     {
+        if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive)
+        {
+            moveInput = Vector2.zero;
+            HandleAnimations();
+            return;
+        }
+
         // Capture input
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
