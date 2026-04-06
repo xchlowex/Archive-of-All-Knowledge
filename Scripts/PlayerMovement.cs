@@ -3,6 +3,11 @@ using UnityEngine;
 // IMPORTANT: Ensure the filename in Unity is "PlayerMovement.cs"
 public class PlayerMovement : MonoBehaviour
 {
+    private static readonly int IsRunningX = Animator.StringToHash("isRunningX");
+    private static readonly int IsRunningLeft = Animator.StringToHash("isRunningLeft");
+    private static readonly int IsRunningFront = Animator.StringToHash("isRunningFront");
+    private static readonly int IsRunningBack = Animator.StringToHash("isRunningBack");
+
     [Header("Component References")]
     [SerializeField] private Animator animator;
     private Rigidbody2D rb;
@@ -55,28 +60,35 @@ public class PlayerMovement : MonoBehaviour
         if (animator == null) return;
 
         // 1. Prioritize Horizontal (X)
-        if (moveInput.x != 0)
+        if (moveInput.x > 0)
         {
-            animator.SetBool("isRunningX", true);
-            animator.SetBool("isRunningFront", false);
-            animator.SetBool("isRunningBack", false);
-
-            // Flip sprite: 1 for right, -1 for left
-            transform.localScale = new Vector3(Mathf.Sign(moveInput.x), 1, 1);
+            animator.SetBool(IsRunningX, true);
+            animator.SetBool(IsRunningLeft, false);
+            animator.SetBool(IsRunningFront, false);
+            animator.SetBool(IsRunningBack, false);
+        }
+        else if (moveInput.x < 0)
+        {
+            animator.SetBool(IsRunningX, false);
+            animator.SetBool(IsRunningLeft, true);
+            animator.SetBool(IsRunningFront, false);
+            animator.SetBool(IsRunningBack, false);
         }
         // 2. Vertical (Y)
         else if (moveInput.y != 0)
         {
-            animator.SetBool("isRunningX", false);
-            animator.SetBool("isRunningBack", moveInput.y > 0);
-            animator.SetBool("isRunningFront", moveInput.y < 0);
+            animator.SetBool(IsRunningX, false);
+            animator.SetBool(IsRunningLeft, false);
+            animator.SetBool(IsRunningBack, moveInput.y > 0);
+            animator.SetBool(IsRunningFront, moveInput.y < 0);
         }
         // 3. Idle
         else
         {
-            animator.SetBool("isRunningX", false);
-            animator.SetBool("isRunningFront", false);
-            animator.SetBool("isRunningBack", false);
+            animator.SetBool(IsRunningX, false);
+            animator.SetBool(IsRunningLeft, false);
+            animator.SetBool(IsRunningFront, false);
+            animator.SetBool(IsRunningBack, false);
         }
     }
 }

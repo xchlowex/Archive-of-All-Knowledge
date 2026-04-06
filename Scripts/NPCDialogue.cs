@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class NPCDialogue : MonoBehaviour, IInteractable
 {
-    [Header("Dialogue")]
+    [Header("Dialogue Source")]
     [SerializeField] private DialogueData dialogueData;
+    [SerializeField] private TextAsset dialogueJson;
 
     [Header("UI")]
     [SerializeField] private GameObject interactionPrompt;
+
+    private DialogueData runtimeJsonDialogue;
 
     private void Start()
     {
@@ -18,9 +21,15 @@ public class NPCDialogue : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (dialogueData != null && DialogueManager.Instance != null)
+        if (DialogueManager.Instance == null)
         {
-            DialogueManager.Instance.StartDialogue(dialogueData);
+            return;
+        }
+
+        DialogueData resolvedDialogue = GetResolvedDialogue();
+        if (resolvedDialogue != null)
+        {
+            DialogueManager.Instance.StartDialogue(resolvedDialogue);
         }
     }
 
@@ -37,6 +46,36 @@ public class NPCDialogue : MonoBehaviour, IInteractable
         if (interactionPrompt != null)
         {
             interactionPrompt.SetActive(false);
+        }
+    }
+
+    private DialogueData GetResolvedDialogue()
+    {
+        if (dialogueData != null)
+        {
+            return dialogueData;
+        }
+
+        if (runtimeJsonDialogue != null)
+        {
+            return runtimeJsonDialogue;
+        }
+
+        if (dialogueJson == null)
+        {
+            return null;
+        }
+
+        runtimeJsonDialogue = DialogueJsonLoader.LoadFromTextAsset(dialogueJson);
+        return runtimeJsonDialogue;
+    }
+
+    private void OnDestroy()
+    {
+        if (runtimeJsonDialogue != null)
+        {
+            Destroy(runtimeJsonDialogue);
+            runtimeJsonDialogue = null;
         }
     }
 }
