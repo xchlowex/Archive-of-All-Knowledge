@@ -1,6 +1,5 @@
 using UnityEngine;
 
-// IMPORTANT: Ensure the filename in Unity is "PlayerMovement.cs"
 public class PlayerMovement : MonoBehaviour
 {
     private static readonly int IsRunningX = Animator.StringToHash("isRunningX");
@@ -22,11 +21,46 @@ public class PlayerMovement : MonoBehaviour
     {
         // Cache the Rigidbody once at the start to save performance
         rb = GetComponent<Rigidbody2D>();
+        if (rb == null)
+        {
+            Debug.LogError("PlayerMovement requires a Rigidbody2D on the same GameObject.");
+            enabled = false;
+            return;
+        }
+
+        // Keep top-down character stable in Play Mode.
+        rb.gravityScale = 0f;
+        rb.freezeRotation = true;
 
         // Optional: Auto-fill animator if you forgot to drag it in the inspector
         if (animator == null)
         {
             animator = GetComponent<Animator>();
+        }
+
+        if (animator == null)
+        {
+            Debug.LogWarning("PlayerMovement could not find an Animator component.");
+        }
+
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr == null)
+        {
+            sr = GetComponentInChildren<SpriteRenderer>();
+        }
+
+        if (sr == null)
+        {
+            Debug.LogWarning("No SpriteRenderer found on Player. The character may be invisible in Play Mode.");
+        }
+        else if (sr.sprite == null)
+        {
+            Debug.LogWarning("SpriteRenderer has no sprite assigned at startup. Check idle animation clip and default sprite.");
+        }
+
+        if (Mathf.Approximately(transform.localScale.x, 0f) || Mathf.Approximately(transform.localScale.y, 0f))
+        {
+            Debug.LogWarning("Player scale is zero on at least one axis, making it invisible.");
         }
     }
 

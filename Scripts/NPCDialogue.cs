@@ -17,12 +17,18 @@ public class NPCDialogue : MonoBehaviour, IInteractable
         {
             interactionPrompt.SetActive(false);
         }
+
+        if (dialogueData == null && dialogueJson == null)
+        {
+            Debug.LogWarning($"{name}: NPCDialogue has no DialogueData or DialogueJson assigned.");
+        }
     }
 
     public void Interact()
     {
         if (DialogueManager.Instance == null)
         {
+            Debug.LogWarning($"{name}: DialogueManager.Instance is missing in scene.");
             return;
         }
 
@@ -30,6 +36,10 @@ public class NPCDialogue : MonoBehaviour, IInteractable
         if (resolvedDialogue != null)
         {
             DialogueManager.Instance.StartDialogue(resolvedDialogue);
+        }
+        else
+        {
+            Debug.LogWarning($"{name}: Could not resolve dialogue source.");
         }
     }
 
