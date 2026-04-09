@@ -5,6 +5,9 @@ public class NPCDialogue : MonoBehaviour, IInteractable
     [Header("Dialogue Source")]
     [SerializeField] private DialogueData dialogueData;
     [SerializeField] private TextAsset dialogueJson;
+    [SerializeField] private string dialogueJsonResourcesPath;
+    [TextArea(4, 16)]
+    [SerializeField] private string dialogueJsonText;
 
     [Header("UI")]
     [SerializeField] private GameObject interactionPrompt;
@@ -73,6 +76,24 @@ public class NPCDialogue : MonoBehaviour, IInteractable
 
         if (dialogueJson == null)
         {
+            if (!string.IsNullOrWhiteSpace(dialogueJsonResourcesPath))
+            {
+                TextAsset resourceJson = Resources.Load<TextAsset>(dialogueJsonResourcesPath);
+                if (resourceJson != null)
+                {
+                    runtimeJsonDialogue = DialogueJsonLoader.LoadFromTextAsset(resourceJson);
+                    return runtimeJsonDialogue;
+                }
+
+                Debug.LogWarning($"{name}: Could not load TextAsset at Resources path '{dialogueJsonResourcesPath}'.");
+            }
+
+            if (!string.IsNullOrWhiteSpace(dialogueJsonText))
+            {
+                runtimeJsonDialogue = DialogueJsonLoader.LoadFromJson(dialogueJsonText, $"{name} inline JSON");
+                return runtimeJsonDialogue;
+            }
+
             return null;
         }
 
