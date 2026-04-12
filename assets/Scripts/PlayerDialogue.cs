@@ -103,9 +103,4 @@ public class PlayerDialogue : MonoBehaviour
     }
 }
 
-public interface IInteractable
-{
-    void Interact();
-    void ShowPrompt();
-    void HidePrompt();
-}
+

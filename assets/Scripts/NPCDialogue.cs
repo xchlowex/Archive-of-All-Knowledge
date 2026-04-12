@@ -9,6 +9,8 @@ public class NPCDialogue : MonoBehaviour, IInteractable
     [TextArea(4, 16)]
     [SerializeField] private string dialogueJsonText;
 
+    [Header("Dialogue")]
+
     [Header("UI")]
     [SerializeField] private GameObject interactionPrompt;
 
@@ -25,6 +27,7 @@ public class NPCDialogue : MonoBehaviour, IInteractable
         {
             Debug.LogWarning($"{name}: NPCDialogue has no DialogueData or DialogueJson assigned.");
         }
+
     }
 
     public void Interact()

@@ -1,89 +1,23 @@
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
-
-// public class PlayerMovement : MonoBehaviour
-// {
-//     [SerializeField] private Animator animator;
-//     // public GameObject bullet;
-//     private Rigidbody2D rb;
-//     private Vector2 v;
-
-//     // Start is called before the first frame update
-//     // void Start()
-//     // {
-        
-//     // }
-
-//     // // Update is called once per frame
-//     // void Update()
-//     // {
-//     //     rb = GetComponent<Rigidbody2D>();
-//     //     v= rb.velocity;
-//     //     v.x = Input.GetAxis("Horizontal") * 10;
-//     //     v.y = Input.GetAxis("Vertical") * 10;
-//     //     rb.velocity = v;
-//     //     /* if (Input.GetKeyDown("space"))
-//     //     {
-//     //         Instantiate(bullet, transform.position, Quaternion.identity);
-//     //     } */
-//     // }
-    
-//     void Start()
-//     {
-//         rb = GetComponent<Rigidbody2D>();
-//     }
-
-//     void Update()
-//     {
-//         // Now just use rb here without calling GetComponent again
-//     }
-//     private void HandleMovement()
-//     {
-//         if (v.x != 0){
-//             animator.SetBool("isRunningFront", false)
-//             animator.SetBool("isRunningBack", false)
-//             animator.SetBool("isRunningX", true)
-
-//         }
-//         else if (v.y >0) {
-//             animator.SetBool("isRunningX", false)
-//             animator.SetBool("isRunningBack", false)
-//             animator.SetBool("isRunningFront", true)
-//         }
-//         else if (v.y <0) {
-//             animator.SetBool("isRunningFront", false)
-//             animator.SetBool("isRunningX", false)
-//             animator.SetBool("isRunningBack", true)
-//         }
-//         else if (v.y = 0) {
-//             animator.SetBool("isRunningX", false)
-//             animator.SetBool("isRunningFront", false)
-//             animator.SetBool("isRunningBack", false)
-//         }
-//     }
-// }   
-
-
-
-
-
-
-
-
 using UnityEngine;
 
-// IMPORTANT: Ensure the filename in Unity is "PlayerMovement.cs"
 public class PlayerMovement : MonoBehaviour
 {
+    private static readonly int IsRunningX = Animator.StringToHash("isRunningX");
+    private static readonly int IsRunningLeft = Animator.StringToHash("isRunningLeft");
+    private static readonly int IsRunningFront = Animator.StringToHash("isRunningFront");
+    private static readonly int IsRunningBack = Animator.StringToHash("isRunningBack");
+
+
     [Header("Component References")]
     [SerializeField] private Animator animator;
     private Rigidbody2D rb;
 
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 5f;
+
     [SerializeField] private SpriteRenderer spriteRenderer;
     
+
     private Vector2 moveInput;
 
     // Start is called before the first frame update
@@ -91,6 +25,47 @@ public class PlayerMovement : MonoBehaviour
     {
         // Cache the Rigidbody once at the start to save performance
         rb = GetComponent<Rigidbody2D>();
+        if (rb == null)
+        {
+            Debug.LogError("PlayerMovement requires a Rigidbody2D on the same GameObject.");
+            enabled = false;
+            return;
+        }
+
+        // Keep top-down character stable in Play Mode.
+        rb.gravityScale = 0f;
+        rb.freezeRotation = true;
+
+        // Optional: Auto-fill animator if you forgot to drag it in the inspector
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
+
+        if (animator == null)
+        {
+            Debug.LogWarning("PlayerMovement could not find an Animator component.");
+        }
+
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr == null)
+        {
+            sr = GetComponentInChildren<SpriteRenderer>();
+        }
+
+        if (sr == null)
+        {
+            Debug.LogWarning("No SpriteRenderer found on Player. The character may be invisible in Play Mode.");
+        }
+        else if (sr.sprite == null)
+        {
+            Debug.LogWarning("SpriteRenderer has no sprite assigned at startup. Check idle animation clip and default sprite.");
+        }
+
+        if (Mathf.Approximately(transform.localScale.x, 0f) || Mathf.Approximately(transform.localScale.y, 0f))
+        {
+            Debug.LogWarning("Player scale is zero on at least one axis, making it invisible.");
+        }
 
         if (spriteRenderer == null)
         {
@@ -105,6 +80,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame (Better for Input)
     void Update()
     {
+        if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive)
+        {
+            moveInput = Vector2.zero;
+            HandleAnimations();
+            return;
+        }
+
+
         // Capture input
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
@@ -125,6 +108,29 @@ public class PlayerMovement : MonoBehaviour
         if (animator == null) return;
 
         // 1. Prioritize Horizontal (X)
+
+        if (moveInput.x > 0)
+        {
+            animator.SetBool(IsRunningX, true);
+            animator.SetBool(IsRunningLeft, false);
+            animator.SetBool(IsRunningFront, false);
+            animator.SetBool(IsRunningBack, false);
+        }
+        else if (moveInput.x < 0)
+        {
+            animator.SetBool(IsRunningX, false);
+            animator.SetBool(IsRunningLeft, true);
+            animator.SetBool(IsRunningFront, false);
+            animator.SetBool(IsRunningBack, false);
+        }
+        // 2. Vertical (Y)
+        else if (moveInput.y != 0)
+        {
+            animator.SetBool(IsRunningX, false);
+            animator.SetBool(IsRunningLeft, false);
+            animator.SetBool(IsRunningBack, moveInput.y > 0);
+            animator.SetBool(IsRunningFront, moveInput.y < 0);
+        
         if (moveInput.x != 0)
         {
             animator.SetBool("isRunningX", true);
@@ -153,4 +159,10 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isRunningBack", false);
         }
     }
+    }
 }
+
+
+
+
+
