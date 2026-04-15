@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -95,18 +95,502 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_0
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 776
+        width: 96
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69257eb26bda946d08d416b502522068
+      internalID: 1473706952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_1
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 777
+        width: 78
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c05b7aa1c944884b0c76e96d48774e
+      internalID: 1240832141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_2
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 777
+        width: 82
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1736b00a7e6cf418db5b3ad422928fa0
+      internalID: -1355910335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_3
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 777
+        width: 98
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0435e7b5f2a94e9caab0a6d2c954145
+      internalID: -1209738584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_4
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 777
+        width: 98
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb4223b0228c493e86105e5f7ef4bc9
+      internalID: 871329220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_5
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 777
+        width: 99
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d8618b207130474fad3ee7212711c06
+      internalID: -994872389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_6
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 778
+        width: 97
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e16998fd4428246ffabc9fec211ff8a7
+      internalID: -138282141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_7
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 534
+        width: 98
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa5b07aed2724ed0ac3c5b0927326c8
+      internalID: 1646100611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_8
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 534
+        width: 119
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf46dcf33292d427cb9c8345ee63113b
+      internalID: 935516798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_9
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 534
+        width: 94
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 764546277e067498e8660fc1f6f19bb9
+      internalID: 1237742805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_10
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 534
+        width: 121
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc21c3c3d56d0421f97003d7f7a48f99
+      internalID: -1451140742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_11
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 534
+        width: 95
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be97d257af0d4409aecf7418a89411a
+      internalID: -1662918726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_12
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 534
+        width: 89
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9ded66d3e9941b196d7096f6df98ec
+      internalID: -1745760200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_13
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 303
+        width: 187
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb1733a07df1c4a9b899df561c306414
+      internalID: 561686853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_14
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 303
+        width: 174
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e62e274ac85458a84312a5258d46e8
+      internalID: 1264987880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_15
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 303
+        width: 175
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32dc9c1a2002a4566aa5b2d523a15e33
+      internalID: -1308398391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_16
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 303
+        width: 179
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d3a0ea8d2234996af4635aeafae7e2
+      internalID: -444948472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_17
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 57
+        width: 280
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57dfa3dd254624fcdaf693eedbcdd357
+      internalID: 483240287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_18
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 58
+        width: 168
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af632fda97a42498ea37edbdac22d705
+      internalID: 1620486823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_19
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 57
+        width: 124
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93e1462413ca44398751b9325d2fd4c
+      internalID: 692340984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_20
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 57
+        width: 136
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b9a90d111b4414f9bf17fecb4b540a
+      internalID: 1953481452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_21
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 20
+        width: 143
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80742179b38a74dc796d31e2a6f4f9e4
+      internalID: -2046947894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1dd4e9717ae9249dbb1d1dde2cd7e632
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_0: 1473706952
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_1: 1240832141
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_10: -1451140742
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_11: -1662918726
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_12: -1745760200
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_13: 561686853
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_14: 1264987880
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_15: -1308398391
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_16: -444948472
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_17: 483240287
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_18: 1620486823
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_19: 692340984
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_2: -1355910335
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_20: 1953481452
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_21: -2046947894
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_3: -1209738584
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_4: 871329220
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_5: -994872389
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_6: -138282141
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_7: 1646100611
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_8: 935516798
+      AWB3_Factory Workers (NPCs)_no_bg_s6o1c565_9: 1237742805
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

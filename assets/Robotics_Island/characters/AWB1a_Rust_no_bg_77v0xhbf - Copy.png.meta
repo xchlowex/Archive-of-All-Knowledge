@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7e223cafe53c1429cb71e9e72d0b55dc
+guid: d304d2803d6fd44f188f2485f08f5d0d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,138 +97,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AWB1b_Rust_no_bg_p25bkqrp_0
+      name: AWB1a_Rust_no_bg_77v0xhbf - Copy_0
       rect:
         serializedVersion: 2
-        x: 59
-        y: 384
-        width: 235
-        height: 356
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0a8b03dca202d4aa0b5e6315b72e8790
-      internalID: 1077755377
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AWB1b_Rust_no_bg_p25bkqrp_1
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 738
-        width: 10
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ea24cd606d0440ea8304166e1063d6a
-      internalID: 1253968097
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AWB1b_Rust_no_bg_p25bkqrp_2
-      rect:
-        serializedVersion: 2
-        x: 396
-        y: 382
-        width: 231
-        height: 363
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6776bfe8cd19b4d4188072a5c1d93067
-      internalID: -779494813
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AWB1b_Rust_no_bg_p25bkqrp_3
-      rect:
-        serializedVersion: 2
-        x: 730
-        y: 382
+        x: 62
+        y: 381
         width: 232
-        height: 354
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 375f070112b394c9d946fd89dc54cf41
-      internalID: -1614389686
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AWB1b_Rust_no_bg_p25bkqrp_4
-      rect:
-        serializedVersion: 2
-        x: 1066
-        y: 384
-        width: 278
-        height: 350
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61a1cac00c91a4b49a0e9f62e961155d
-      internalID: -331388611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AWB1b_Rust_no_bg_p25bkqrp_5
-      rect:
-        serializedVersion: 2
-        x: 1272
-        y: 385
-        width: 5
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5be7ec39d1eb24d21b513a36ce77b9cb
-      internalID: 1222480069
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AWB1b_Rust_no_bg_p25bkqrp_6
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 12
-        width: 246
         height: 359
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -237,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd95b1f5f82f8455e93f6dc8b87789cb
-      internalID: 655246593
+      spriteID: 60e92416bbb1345ba88a441a10502b98
+      internalID: 1314139326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AWB1b_Rust_no_bg_p25bkqrp_7
+      name: AWB1a_Rust_no_bg_77v0xhbf - Copy_1
       rect:
         serializedVersion: 2
-        x: 400
-        y: 21
-        width: 255
-        height: 362
+        x: 199
+        y: 738
+        width: 12
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,17 +132,185 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae3eea3439f5d4c67b3d70f69ad448b4
-      internalID: 1755445675
+      spriteID: 301107f51f10447348b647a37806d815
+      internalID: 1892116629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AWB1b_Rust_no_bg_p25bkqrp_8
+      name: AWB1a_Rust_no_bg_77v0xhbf - Copy_2
       rect:
         serializedVersion: 2
-        x: 738
+        x: 397
+        y: 381
+        width: 230
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87b336c12b3243bfaca8866ec87cf43
+      internalID: 1088039637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB1a_Rust_no_bg_77v0xhbf - Copy_3
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 382
+        width: 293
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 639e103ecd0a9495ea1567de8e2d84fa
+      internalID: 1812695724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB1a_Rust_no_bg_77v0xhbf - Copy_4
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 382
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2bd2fa2feee499eadb9b625c2d6d73
+      internalID: 1362938846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB1a_Rust_no_bg_77v0xhbf - Copy_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 19
+        width: 255
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01d715be55d034bb49e29df487a8e2f6
+      internalID: -1657543639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB1a_Rust_no_bg_77v0xhbf - Copy_6
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 381
+        width: 230
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27aa251711cc54294ba0d40153c468a2
+      internalID: 1918547354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB1a_Rust_no_bg_77v0xhbf - Copy_7
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 372
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7b63639e2f44cf18e2d1eda5310734
+      internalID: -594285405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB1a_Rust_no_bg_77v0xhbf - Copy_8
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 372
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a6f5c60744943528aa42b254f0acd3
+      internalID: -973509162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB1a_Rust_no_bg_77v0xhbf - Copy_9
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 12
+        width: 245
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fcc537095be347ce973f65875ac326e
+      internalID: -755136254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB1a_Rust_no_bg_77v0xhbf - Copy_10
+      rect:
+        serializedVersion: 2
+        x: 737
         y: 19
         width: 257
         height: 352
@@ -279,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84f34b05e66544308836e2918c0ac741
-      internalID: 639439622
+      spriteID: 0b97204cd02f24c2a8a98b2c88bd9eb5
+      internalID: 1497462719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AWB1b_Rust_no_bg_p25bkqrp_9
+      name: AWB1a_Rust_no_bg_77v0xhbf - Copy_11
       rect:
         serializedVersion: 2
-        x: 1073
-        y: 12
-        width: 256
-        height: 361
+        x: 1074
+        y: 9
+        width: 254
+        height: 362
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,8 +342,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 056de49bc7f604bd3a366c3197ec1fb6
-      internalID: 926193322
+      spriteID: fb4a33c0d913c478c90a0381b687348e
+      internalID: 175974569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB1a_Rust_no_bg_77v0xhbf - Copy_12
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 17
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d1ccf482719040f89f1491aa4b65143
+      internalID: -709821282
       vertices: []
       indices: 
       edges: []
@@ -309,7 +372,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ed5f4f519235949d0860d0b0a4bad003
+    spriteID: 88c95cc5398284220847d56a82a1f799
     internalID: 0
     vertices: []
     indices: 
@@ -317,16 +380,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AWB1b_Rust_no_bg_p25bkqrp_0: 1077755377
-      AWB1b_Rust_no_bg_p25bkqrp_1: 1253968097
-      AWB1b_Rust_no_bg_p25bkqrp_2: -779494813
-      AWB1b_Rust_no_bg_p25bkqrp_3: -1614389686
-      AWB1b_Rust_no_bg_p25bkqrp_4: -331388611
-      AWB1b_Rust_no_bg_p25bkqrp_5: 1222480069
-      AWB1b_Rust_no_bg_p25bkqrp_6: 655246593
-      AWB1b_Rust_no_bg_p25bkqrp_7: 1755445675
-      AWB1b_Rust_no_bg_p25bkqrp_8: 639439622
-      AWB1b_Rust_no_bg_p25bkqrp_9: 926193322
+      AWB1a_Rust_no_bg_77v0xhbf - Copy_0: 1314139326
+      AWB1a_Rust_no_bg_77v0xhbf - Copy_1: 1892116629
+      AWB1a_Rust_no_bg_77v0xhbf - Copy_10: 1497462719
+      AWB1a_Rust_no_bg_77v0xhbf - Copy_11: 175974569
+      AWB1a_Rust_no_bg_77v0xhbf - Copy_12: -709821282
+      AWB1a_Rust_no_bg_77v0xhbf - Copy_2: 1088039637
+      AWB1a_Rust_no_bg_77v0xhbf - Copy_3: 1812695724
+      AWB1a_Rust_no_bg_77v0xhbf - Copy_4: 1362938846
+      AWB1a_Rust_no_bg_77v0xhbf - Copy_5: -1657543639
+      AWB1a_Rust_no_bg_77v0xhbf - Copy_6: 1918547354
+      AWB1a_Rust_no_bg_77v0xhbf - Copy_7: -594285405
+      AWB1a_Rust_no_bg_77v0xhbf - Copy_8: -973509162
+      AWB1a_Rust_no_bg_77v0xhbf - Copy_9: -755136254
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -95,18 +95,722 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 874
+        width: 172
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ec713538471451b8184ccb307735c3
+      internalID: -1751151667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_1
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 874
+        width: 175
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a40738c447c3b47d48262388a9f11356
+      internalID: -1338382872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_2
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 874
+        width: 171
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f16f64a928246b6a1a7a095479aa43
+      internalID: 642492259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_3
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 873
+        width: 175
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99921c6d97d1d430fb55f566098a56c0
+      internalID: -1607442937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_4
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 874
+        width: 172
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738b94c0af35a413fb0d5197ccf5bc7f
+      internalID: -1704891626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_5
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 705
+        width: 175
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e907266ce2fb49608c06c683ab4130d
+      internalID: 1680296396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_6
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 706
+        width: 175
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174752b7eeb854c9197c611ffaea8e7d
+      internalID: -111740991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_7
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 705
+        width: 173
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727a4794248ab4d4c8d27d6bcc35e802
+      internalID: -765778791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_8
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 705
+        width: 176
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fbcc7c977f3843819c9e8e0774a3d6e
+      internalID: 1925208061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_9
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 706
+        width: 177
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce9eee2524aa48bcaa1d41e38f51ea6
+      internalID: 1228715543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_10
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 534
+        width: 180
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d14edddab41d400b95fa16fe8dc9682
+      internalID: 595335875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_11
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 539
+        width: 207
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e498b9bd1ed0a42acab91c449128048e
+      internalID: 976404674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_12
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 530
+        width: 204
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8a02946984d4c3c934f9ecbacd4a28
+      internalID: 828933842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_13
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 359
+        width: 241
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b783b382fcd44b08dde7b856689374
+      internalID: 709424761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_14
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 362
+        width: 244
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7943880a4ce491197c1be65c5c8d48
+      internalID: 1714987467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_15
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 449
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae8b3ad1eb9c40adb6fc6bcde6e224e
+      internalID: -1834000219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_16
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 362
+        width: 242
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a9aa6153930d44c08b57cd4d29b3ffa
+      internalID: 1205585394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_17
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 358
+        width: 206
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc4818631c5e4ed0980f67345f40558
+      internalID: 102569150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_18
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 198
+        width: 224
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28e3d936e34d450e820efe4b1bab65c
+      internalID: 209956248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_19
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 203
+        width: 245
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce8a43366792426cba3cef3327fbf9a
+      internalID: -383878536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_20
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 17
+        width: 206
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f451faee8b6542008fb0aab2d116788
+      internalID: -964888876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_21
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 207
+        width: 238
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4526b4e376b4e41ab958d1f6ea67052c
+      internalID: 1489174402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_22
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 18
+        width: 207
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e43fbdf78ca3847d7a2d4527102ac4dd
+      internalID: 1689177356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 20
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4023a767df3145bd93ce6040552f3b3
+      internalID: 900448559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_24
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 206
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafc817961a334c74a58241ec40fa896
+      internalID: 1959776797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_25
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 41
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b60e2378b2e4e87a456fe709feb22d
+      internalID: -1146173087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_26
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 0
+        width: 209
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d03779714554372ab823e154f07e96
+      internalID: -1509659385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_27
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 59
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42284df9e53f417b9be4eba94178cc4
+      internalID: 1695218616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_28
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 0
+        width: 123
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee186db02bc8941b9bc4ea96dda8f183
+      internalID: -222811820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_29
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 0
+        width: 89
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c804ee28864423584f726685e9bb31
+      internalID: -2047723008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_30
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 0
+        width: 111
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d27e4b486361b4fb6a83d5583bb4f4a7
+      internalID: -2009928478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_31
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 0
+        width: 165
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6a0cf836cd644ecb4da61e8b56a589
+      internalID: -451612225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d9a77e55dcc154fcfad2ebde7bbedf0f
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_0: -1751151667
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_1: -1338382872
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_10: 595335875
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_11: 976404674
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_12: 828933842
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_13: 709424761
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_14: 1714987467
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_15: -1834000219
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_16: 1205585394
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_17: 102569150
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_18: 209956248
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_19: -383878536
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_2: 642492259
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_20: -964888876
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_21: 1489174402
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_22: 1689177356
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_23: 900448559
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_24: 1959776797
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_25: -1146173087
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_26: -1509659385
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_27: 1695218616
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_28: -222811820
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_29: -2047723008
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_3: -1607442937
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_30: -2009928478
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_31: -451612225
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_4: -1704891626
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_5: 1680296396
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_6: -111740991
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_7: -765778791
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_8: 1925208061
+      AWB5_enemySmall_MechCrab Enemy_no_bg_t64ucb6d_9: 1228715543
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

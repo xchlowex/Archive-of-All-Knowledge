@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -95,18 +95,436 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 768
+        width: 138
+        height: 241
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4286b229334f740f1beb55d682b9f997
+      internalID: -976437718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_1
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 768
+        width: 140
+        height: 241
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1efaf94d02c8478a896075eaaeb06e8
+      internalID: 1044771338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_2
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 768
+        width: 140
+        height: 241
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f66e0006bda449da888c458fb4d59ca
+      internalID: 1595493937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_3
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 768
+        width: 139
+        height: 241
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a33fb317e6c7d4f2e8b22e8e8007a8b0
+      internalID: 1852585458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_4
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 768
+        width: 140
+        height: 241
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2aa214fac071464993f4da6ec4dcaf2
+      internalID: 1523407126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 517
+        width: 138
+        height: 241
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80042afa5dcf64de3b1c753dcfee12ef
+      internalID: -1009375906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_6
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 516
+        width: 139
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c3892b894b749ce8508362b0a96236
+      internalID: -1367752254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_7
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 516
+        width: 140
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e572d96dab0b42478ac7b404b7ac0d9
+      internalID: -1042336990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_8
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 514
+        width: 139
+        height: 243
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aac536518fd0403c8a61db78ca8d533
+      internalID: 1392141867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_9
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 259
+        width: 144
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91eba06500ff6412cb5899fdfc9cfe61
+      internalID: 761171542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_10
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 258
+        width: 143
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5676884d8cf4b4fa465ecd74e9890c
+      internalID: 852737607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_11
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 258
+        width: 147
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d68a56b007b264a5ba5168fae7ad828f
+      internalID: -314533944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_12
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 258
+        width: 143
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a5018f8183948e7b9161cd69229d7c
+      internalID: -1143452633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_13
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 478
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca20d0efb866434a9c615fcb5b0deac
+      internalID: -1584004572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_14
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 258
+        width: 142
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc7f63693db848569b9b3d4cdc39929
+      internalID: -1786025937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_15
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 236
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6358656437dde4574a3a1d185a752aec
+      internalID: 352306124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_16
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 0
+        width: 272
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88bc8780baa4b44a2a2c3b6a1eeef491
+      internalID: -2021293600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_17
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 0
+        width: 204
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba1f26543e5834bfdb28f4c15e9cd618
+      internalID: -527187960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_18
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 0
+        width: 245
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0acedc5bbb0fa4e0a98534e8de89401f
+      internalID: 279766380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
-    internalID: 0
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_0: -976437718
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_1: 1044771338
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_10: 852737607
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_11: -314533944
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_12: -1143452633
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_13: -1584004572
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_14: -1786025937
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_15: 352306124
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_16: -2021293600
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_17: -527187960
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_18: 279766380
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_2: 1595493937
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_3: 1852585458
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_4: 1523407126
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_5: -1009375906
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_6: -1367752254
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_7: -1042336990
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_8: 1392141867
+      AWB4_enemyBig_Overseer Automaton_no_bg_r447smvz_9: 761171542
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

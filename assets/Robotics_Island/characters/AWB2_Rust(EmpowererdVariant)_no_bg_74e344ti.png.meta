@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -95,18 +95,216 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 387
+        width: 236
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0121c3465c42d4872b0b2ce965c066fc
+      internalID: -1110781935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_1
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 382
+        width: 256
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7856b70409f834d31a36ffd2f56f8969
+      internalID: 509816009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_2
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 21
+        width: 257
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a414b116fd8e4955921225171399594
+      internalID: 1559167454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_3
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 381
+        width: 315
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03cdad4c35e554324a73131db86d173d
+      internalID: -1347058804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_4
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 385
+        width: 232
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 624192c3a2d584d1e85b6b41058244bf
+      internalID: 80825442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_5
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 14
+        width: 257
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f11eb062f4364047a3de298afaebc63
+      internalID: -1974870534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_6
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 15
+        width: 263
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807b981c94bb84f3d9207b51ec676940
+      internalID: 2088972094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_7
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 18
+        width: 263
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f9c698e79924893b3ce29221ca1890
+      internalID: -387008321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_8
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 12
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99de7077edc514e5ebf902ecad39fa37
+      internalID: -1746954697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8027df06c4a0f4493834d474da319916
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_0: -1110781935
+      AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_1: 509816009
+      AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_2: 1559167454
+      AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_3: -1347058804
+      AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_4: 80825442
+      AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_5: -1974870534
+      AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_6: 2088972094
+      AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_7: -387008321
+      AWB2_Rust(EmpowererdVariant)_no_bg_74e344ti_8: -1746954697
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -95,18 +95,458 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 856
+        width: 168
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1989dcf0020944e1ab1b8b99f8fb7d69
+      internalID: -146304376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 518
+        width: 217
+        height: 483
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae6a1af5cfaf4aff88aefe99d21b8ba
+      internalID: -1299300359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_2
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 518
+        width: 250
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e47000b0690e478ab52ec53f3cb9951
+      internalID: 224008116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_3
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 856
+        width: 183
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df3ae3b774534f8499c06ef1a9f40f2
+      internalID: -1564816212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_4
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 856
+        width: 183
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4ab6ee2342e4295b9bf4750b1aae7e
+      internalID: -2097563622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 687
+        width: 170
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5994e2331f95848909358afea5e763f3
+      internalID: -675624598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_6
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 687
+        width: 171
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f61b55aafbb0e47c3a1e3812b44d764f
+      internalID: 668002504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_7
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 687
+        width: 188
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d747e0e429464f70b9975e7ec6ac9b0
+      internalID: 808733599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_8
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 518
+        width: 175
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128a51005f71b46459838f0f4ec7c53a
+      internalID: 950816749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_9
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 348
+        width: 201
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42e647286c4646489b9b464a03cf31f
+      internalID: 1889875468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_10
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 346
+        width: 223
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b7b7ffc2bae493e81f6c87d5b635cc
+      internalID: -234926417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_11
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 348
+        width: 224
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2050b6429bb4acebb5f94e048be913
+      internalID: 14960535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_12
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 346
+        width: 169
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e75850c15d14ac38950675747c959b
+      internalID: -463542813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_13
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 182
+        width: 240
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f92966c25fdc48e59c806ab5dcbe864
+      internalID: -1985601380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_14
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 0
+        width: 262
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfd7c4d930425495fa09af17e8bc84b4
+      internalID: -171048681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_15
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 336
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc086b299565418fb172d8734398c45
+      internalID: -1013819251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_16
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 148
+        width: 222
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 493b91570efa947489e63567e23aed1c
+      internalID: -566180302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 224
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93e031a81dc55448db82c0a0288dd795
+      internalID: -930473273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_18
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 0
+        width: 249
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208d64ee9227141e690eb9f4301a2d32
+      internalID: -624673522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_19
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 0
+        width: 220
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9bcf33cc05294d789e9d902430fee91
+      internalID: -1204497818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: faacc93029cdf48a7886b7efae02a070
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_0: -146304376
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_1: -1299300359
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_10: -234926417
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_11: 14960535
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_12: -463542813
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_13: -1985601380
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_14: -171048681
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_15: -1013819251
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_16: -566180302
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_17: -930473273
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_18: -624673522
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_19: -1204497818
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_2: 224008116
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_3: -1564816212
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_4: -2097563622
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_5: -675624598
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_6: 668002504
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_7: 808733599
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_8: 950816749
+      AWB6_enemyMid_Anvil Sentinel_no_bg_6im7kl4x_9: 1889875468
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

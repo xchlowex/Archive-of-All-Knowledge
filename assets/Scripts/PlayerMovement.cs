@@ -107,58 +107,33 @@ public class PlayerMovement : MonoBehaviour
     {
         if (animator == null) return;
 
-        // 1. Prioritize Horizontal (X)
-
-        if (moveInput.x > 0)
-        {
-            animator.SetBool(IsRunningX, true);
-            animator.SetBool(IsRunningLeft, false);
-            animator.SetBool(IsRunningFront, false);
-            animator.SetBool(IsRunningBack, false);
-        }
-        else if (moveInput.x < 0)
-        {
-            animator.SetBool(IsRunningX, false);
-            animator.SetBool(IsRunningLeft, true);
-            animator.SetBool(IsRunningFront, false);
-            animator.SetBool(IsRunningBack, false);
-        }
-        // 2. Vertical (Y)
-        else if (moveInput.y != 0)
-        {
-            animator.SetBool(IsRunningX, false);
-            animator.SetBool(IsRunningLeft, false);
-            animator.SetBool(IsRunningBack, moveInput.y > 0);
-            animator.SetBool(IsRunningFront, moveInput.y < 0);
-        
+        // 1. Check for Horizontal Movement (Left/Right)
         if (moveInput.x != 0)
         {
-            animator.SetBool("isRunningX", true);
-            animator.SetBool("isRunningFront", false);
-            animator.SetBool("isRunningBack", false);
-
-            // Replace '2f' with whatever scale you actually want (e.g., 1.5f, 3.0f)
-        // float playerSize = 1.5f; 
-        // transform.localScale = new Vector3(Mathf.Sign(moveInput.x) * playerSize, playerSize, 1);
-            spriteRenderer.flipX = moveInput.x < 0;
+            animator.SetBool(IsRunningX, true);
+            animator.SetBool(IsRunningFront, false);
+            animator.SetBool(IsRunningBack, false);
+            
+            // Flip the sprite based on direction
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.flipX = moveInput.x < 0;
+            }
         }
-        // 2. Vertical (Y) - FIXED LOGIC HERE
+        // 2. Check for Vertical Movement (Up/Down)
         else if (moveInput.y != 0)
         {
-            animator.SetBool("isRunningX", false);
-            
-            // If moving UP (Y > 0), show BACK. If moving DOWN (Y < 0), show FRONT.
-            animator.SetBool("isRunningBack", moveInput.y > 0); 
-            animator.SetBool("isRunningFront", moveInput.y < 0);
+            animator.SetBool(IsRunningX, false);
+            animator.SetBool(IsRunningBack, moveInput.y > 0); 
+            animator.SetBool(IsRunningFront, moveInput.y < 0);
         }
-        // 3. Idle
+        // 3. Idle (No movement)
         else
         {
-            animator.SetBool("isRunningX", false);
-            animator.SetBool("isRunningFront", false);
-            animator.SetBool("isRunningBack", false);
+            animator.SetBool(IsRunningX, false);
+            animator.SetBool(IsRunningFront, false);
+            animator.SetBool(IsRunningBack, false);
         }
-    }
     }
 }
 

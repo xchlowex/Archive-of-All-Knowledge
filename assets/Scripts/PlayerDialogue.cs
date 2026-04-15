@@ -26,11 +26,10 @@ public class PlayerDialogue : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Player touched: " + other.name); // See if the player touches ANYTHING
         IInteractable interactable = GetInteractableFromCollider(other);
-        if (interactable == null)
-        {
-            return;
-        }
+        if (interactable == null) return;
+        
 
         if (interactablesInRange.Add(interactable))
         {
@@ -101,6 +100,13 @@ public class PlayerDialogue : MonoBehaviour
         interactablesInRange.Clear();
         currentInteractable = null;
     }
+}
+
+public interface IInteractable
+{
+    void Interact();
+    void ShowPrompt();
+    void HidePrompt();
 }
 
 
