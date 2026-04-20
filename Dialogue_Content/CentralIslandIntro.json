@@ -5,16 +5,34 @@
       "nodeId": "start",
       "lines": [
         {
-          "speakerName": "System",
+          "speakerName": "? ? ?",
           "text": "Initializing... Connection established. Welcome, Traveler. Your journey begins now.",
           "hasChoice": false,
           "choices": []
         },
         {
-          "speakerName": "Task Board",
-          "text": "To the seeker who arrives:\nThree islands await your presence.\nThree trials will test your spirit.\nThree stars will light your path.\nSeek understanding in sight, action, and language.\nWhen all three shine bright, the storm will part. Trust the journey.",
+          "speakerName": "? ? ?",
+          "text": "To the seeker who arrives:\nThree islands await your presence.",
           "hasChoice": false,
           "choices": []
+        },
+        {
+          "speakerName": "? ? ?",
+          "text": "Three trials will test your spirit.\nThree stars will light your path.\nSeek understanding in sight, action, and language.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "? ? ?",
+          "text": "When all three shine bright, the storm will part.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "? ? ?",
+          "text": "Trust the journey.",
+          "hasChoice": false,
+          "choices": [] 
         }
       ]
     }
