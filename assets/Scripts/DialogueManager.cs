@@ -40,8 +40,27 @@ public class DialogueManager : MonoBehaviour
     
     public void StartDialogue(DialogueData dialogue)
     {
+        if (dialogue == null || dialogue.nodes == null || dialogue.nodes.Count == 0)
+        {
+            Debug.LogWarning("StartDialogue called with empty dialogue data.");
+            return;
+        }
+
+        DialogueNode startNode = dialogue.nodes.Find(node => node.nodeId == dialogue.startNodeId);
+        if (startNode == null)
+        {
+            Debug.LogWarning($"StartDialogue could not find start node '{dialogue.startNodeId}'.");
+            return;
+        }
+
+        if (startNode.lines == null || startNode.lines.Count == 0)
+        {
+            Debug.LogWarning($"StartDialogue found start node '{dialogue.startNodeId}' but it has no lines.");
+            return;
+        }
+
         currentDialogue = dialogue;
-        currentNode = dialogue.nodes.Find(node => node.nodeId == dialogue.startNodeId);
+        currentNode = startNode;
         currentLineIndex = 0;
         
         dialoguePanel.SetActive(true);
@@ -50,7 +69,7 @@ public class DialogueManager : MonoBehaviour
     
     private void DisplayCurrentLine()
     {
-        if (currentNode == null || currentLineIndex >= currentNode.lines.Count)
+        if (currentNode == null || currentNode.lines == null || currentLineIndex >= currentNode.lines.Count)
         {
             EndDialogue();
             return;
@@ -106,15 +125,34 @@ public class DialogueManager : MonoBehaviour
     private void ShowChoices(List<DialogueChoice> choices)
     {
         choicePanel.SetActive(true);
+
+        bool hasLayoutGroup = choicePanel.GetComponent<LayoutGroup>() != null;
+        int index = 0;
         
         foreach (var choice in choices)
         {
             Button choiceButton = Instantiate(choiceButtonPrefab, choicePanel.transform);
             choiceButton.GetComponentInChildren<TextMeshProUGUI>().text = choice.choiceText;
+
+            if (!hasLayoutGroup)
+            {
+                RectTransform buttonRect = choiceButton.GetComponent<RectTransform>();
+                if (buttonRect != null)
+                {
+                    float buttonHeight = buttonRect.sizeDelta.y > 0f ? buttonRect.sizeDelta.y : 40f;
+                    float spacing = buttonHeight + 10f;
+
+                    buttonRect.anchorMin = new Vector2(0.5f, 1f);
+                    buttonRect.anchorMax = new Vector2(0.5f, 1f);
+                    buttonRect.pivot = new Vector2(0.5f, 1f);
+                    buttonRect.anchoredPosition = new Vector2(0f, -index * spacing);
+                }
+            }
             
             // Store choice data in button
             var choiceData = choice;
             choiceButton.onClick.AddListener(() => OnChoiceSelected(choiceData));
+            index++;
         }
     }
     
@@ -152,6 +190,12 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        // Do not advance lines while player is choosing an option.
+        if (choicePanel != null && choicePanel.activeSelf)
+        {
+            return;
+        }
+
         if (isTyping)
         {
             // Skip typing
@@ -185,8 +229,9 @@ public class DialogueManager : MonoBehaviour
     
     private void Update()
     {
-        // Quick continue with mouse click or spacebar
-        if (dialoguePanel.activeSelf && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)))
+        // Quick continue with mouse click or spacebar, but never while choices are on screen.
+        bool choicesVisible = choicePanel != null && choicePanel.activeSelf;
+        if (dialoguePanel.activeSelf && !choicesVisible && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)))
         {
             ContinueDialogue();
         }
