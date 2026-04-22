@@ -52,7 +52,7 @@ Scene scripts are expected under `assets/Scripts`:
 3. `Dialogue Json Resources Path` (string path in `Resources`)
 4. `Dialogue Json Text` (inline JSON pasted in inspector)
 
-## 3. Scene setup (minimum working)
+## 3. Scene setup
 
 ### A. DialogueManager object
 1. Create empty object `DialogueManager`.
