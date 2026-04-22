@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Robotics_Island/Robotics_Island.unity
+    path: Assets/Island_Robotics/Robotics_Island.unity
     guid: 315cecdc593fb479aac5d9de1fe9afd6
   - enabled: 1
-    path: Assets/Robotics_Island/Battle_Arena.unity
+    path: Assets/Island_Robotics/Battle_Arena.unity
     guid: 5fd09dbb680ed44a195c49f15303ed25
   m_configObjects: {}
