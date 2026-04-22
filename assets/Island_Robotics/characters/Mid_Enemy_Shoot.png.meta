@@ -1,0 +1,730 @@
+fileFormatVersion: 2
+guid: e55caa7ba26914921a496f27b94a9db1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 769
+        width: 141
+        height: 238
+      alignment: 9
+      pivot: {x: 0.52808416, y: 0.5748714}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce73dc86037c4d8a9436f463b5445d8
+      internalID: -1753421388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_1
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 769
+        width: 206
+        height: 239
+      alignment: 9
+      pivot: {x: 0.3942745, y: 0.5828426}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c372da9ca98c64e1699679e599e0596e
+      internalID: -1854265359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_2
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 769
+        width: 214
+        height: 237
+      alignment: 9
+      pivot: {x: 0.38897476, y: 0.6002499}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf5193485b694d1c887d9d0b35ac20c
+      internalID: -1818283421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_3
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 768
+        width: 164
+        height: 238
+      alignment: 9
+      pivot: {x: 0.43062574, y: 0.588779}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaffb2dd9986b41e38839c3e14a3aca6
+      internalID: -1240463295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_4
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 768
+        width: 155
+        height: 236
+      alignment: 9
+      pivot: {x: 0.62583286, y: 0.60330564}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf27e54cb82c4266b3bb989959bfa95
+      internalID: 366896519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 516
+        width: 242
+        height: 240
+      alignment: 9
+      pivot: {x: 0.47985122, y: 0.60158384}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e57c847398164d8fa49e2528ab74a40
+      internalID: -1212073552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_6
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 515
+        width: 249
+        height: 242
+      alignment: 9
+      pivot: {x: 0.33028573, y: 0.6007443}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f561aef1f87744c329e8fd117b78f064
+      internalID: 730867729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_7
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 515
+        width: 296
+        height: 242
+      alignment: 9
+      pivot: {x: 0.4725449, y: 0.59402794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e8eecd1b5ffd4fa9838a123bf1fa58d
+      internalID: 1962489928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_8
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 257
+        width: 173
+        height: 248
+      alignment: 9
+      pivot: {x: 0.32508647, y: 0.58134425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9042eb2432a445b3a1576811deb384b
+      internalID: 308111940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_9
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 691
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d2727868f3944e0983157803f2c92a
+      internalID: 913544379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_10
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 696
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fff764b2f65493f839e4b8cb7f2cd4
+      internalID: -1302244052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_11
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 516
+        width: 138
+        height: 241
+      alignment: 9
+      pivot: {x: 0.53533316, y: 0.60790634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eae67bf98a2e4532a2d222671e507f2
+      internalID: -2069638372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_12
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 671
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b6fc9560f9e46ffa11ed2b035ff601
+      internalID: -1356900503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_13
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 618
+        width: 26
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c8e20eb67344a7e9a68c9f813c9e7f
+      internalID: 1323418919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_14
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 647
+        width: 24
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8795fb99a8b2460d9aa0dcda0c07631
+      internalID: -835549581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_15
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 259
+        width: 225
+        height: 243
+      alignment: 9
+      pivot: {x: 0.3157334, y: 0.5802636}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a528aa605473487b982c33fb47aa101
+      internalID: -656515909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_16
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 259
+        width: 174
+        height: 243
+      alignment: 9
+      pivot: {x: 0.3879079, y: 0.59364086}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc87e9d6917114dda991004bb9ae84d5
+      internalID: 981072819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_17
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 259
+        width: 142
+        height: 244
+      alignment: 9
+      pivot: {x: 0.51144624, y: 0.56661224}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b6310f67f7044ae92aa1a0656240aa
+      internalID: -199636852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_18
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 259
+        width: 142
+        height: 243
+      alignment: 9
+      pivot: {x: 0.5000004, y: 0.59364086}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2a360c05f2a493cad25b142d05d3fe
+      internalID: -844043306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_19
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 4
+        width: 170
+        height: 228
+      alignment: 9
+      pivot: {x: 0.4904394, y: 0.5356433}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86cfca9f73dfc44e28e68cd874548ed9
+      internalID: -1664834438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_20
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 221
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5734cd7df14ab4111a8a124d6f09cf06
+      internalID: -1196628035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_21
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 228
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9007231fce334e2699e0e73c4f57eba
+      internalID: -1701868719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_22
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 217
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082933d11d76a44249bfb7f38c561d48
+      internalID: -1722719939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_23
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 4
+        width: 235
+        height: 215
+      alignment: 9
+      pivot: {x: 0.35406506, y: 0.56568074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea899d01b9094dd59a3a23fe32cf53b
+      internalID: 344601934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_24
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 4
+        width: 240
+        height: 216
+      alignment: 9
+      pivot: {x: 0.35710526, y: 0.556037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdb90ce8f96c4965bc9e4a45776188d
+      internalID: 75218158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_25
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 155
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c680a8c0fa4b44b3998123b59df1cfe
+      internalID: -1882618002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_26
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 4
+        width: 162
+        height: 214
+      alignment: 9
+      pivot: {x: 0.52006584, y: 0.5759505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c404f1f64bb4560b23dd62dfff9338
+      internalID: -1403690656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mid_Enemy_Shoot_27
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 618
+        width: 19
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 99}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c5e47cc6d9a46bdb5afc2badd33a4c
+      internalID: -2059988542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Mid_Enemy_Shoot_0: -1753421388
+      Mid_Enemy_Shoot_1: -1854265359
+      Mid_Enemy_Shoot_10: -1302244052
+      Mid_Enemy_Shoot_11: -2069638372
+      Mid_Enemy_Shoot_12: -1356900503
+      Mid_Enemy_Shoot_13: 1323418919
+      Mid_Enemy_Shoot_14: -835549581
+      Mid_Enemy_Shoot_15: -656515909
+      Mid_Enemy_Shoot_16: 981072819
+      Mid_Enemy_Shoot_17: -199636852
+      Mid_Enemy_Shoot_18: -844043306
+      Mid_Enemy_Shoot_19: -1664834438
+      Mid_Enemy_Shoot_2: -1818283421
+      Mid_Enemy_Shoot_20: -1196628035
+      Mid_Enemy_Shoot_21: -1701868719
+      Mid_Enemy_Shoot_22: -1722719939
+      Mid_Enemy_Shoot_23: 344601934
+      Mid_Enemy_Shoot_24: 75218158
+      Mid_Enemy_Shoot_25: -1882618002
+      Mid_Enemy_Shoot_26: -1403690656
+      Mid_Enemy_Shoot_27: -2059988542
+      Mid_Enemy_Shoot_3: -1240463295
+      Mid_Enemy_Shoot_4: 366896519
+      Mid_Enemy_Shoot_5: -1212073552
+      Mid_Enemy_Shoot_6: 730867729
+      Mid_Enemy_Shoot_7: 1962489928
+      Mid_Enemy_Shoot_8: 308111940
+      Mid_Enemy_Shoot_9: 913544379
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
