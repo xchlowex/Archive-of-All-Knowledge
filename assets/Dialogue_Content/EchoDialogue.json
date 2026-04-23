@@ -28,7 +28,7 @@
             },
             {
               "choiceText": "I’d rather not right now.",
-              "nextNodeId": "accepted",
+              "nextNodeId": "wait",
               "humanityModifier": 0
             }
           ]
@@ -47,6 +47,17 @@
         {
           "speakerName": "Echo",
           "text": "To complete this island, follow the path to your right and enter the corridor. Your quest awaits there.",
+          "hasChoice": false,
+          "choices": []
+        }
+      ]
+    },
+    {
+      "nodeId": "wait",
+      "lines": [
+        {
+          "speakerName": "Echo",
+          "text": "Very well. Return when your thoughts are steadier, and we shall begin the trial.",
           "hasChoice": false,
           "choices": []
         }

@@ -21,7 +21,7 @@
             },
             {
               "choiceText": "I am not ready.",
-              "nextNodeId": "rule_reminder",
+              "nextNodeId": "pre_start_wait",
               "humanityModifier": 0
             }
           ]
@@ -48,7 +48,29 @@
             },
             {
               "choiceText": "Leave for now.",
+              "nextNodeId": "pre_start_wait",
+              "humanityModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "pre_start_wait",
+      "lines": [
+        {
+          "speakerName": "Echo",
+          "text": "Very well. Gather your thoughts, then return to the corridor when you are ready to reason clearly.",
+          "hasChoice": true,
+          "choices": [
+            {
+              "choiceText": "I am ready now. Begin.",
               "nextNodeId": "q1",
+              "humanityModifier": 0
+            },
+            {
+              "choiceText": "Remind me of the rule.",
+              "nextNodeId": "rule_reminder",
               "humanityModifier": 0
             }
           ]
@@ -87,7 +109,7 @@
       "lines": [
         {
           "speakerName": "Echo",
-          "text": "Not quite. Two words can be related without sharing meaning. Try again.",
+          "text": "Not quite. Distinguish what is guaranteed from what is merely possible. Try again.",
           "hasChoice": true,
           "choices": [
             {
@@ -175,7 +197,7 @@
       "lines": [
         {
           "speakerName": "Echo",
-          "text": "Form and agreement matter. Let grammar guide you back.",
+          "text": "Not quite. Focus on what 'only' scopes over: who said it, not who solved it.",
           "hasChoice": true,
           "choices": [
             {
@@ -219,7 +241,7 @@
       "lines": [
         {
           "speakerName": "Echo",
-          "text": "Look for category, not sound. Meaning reveals the outsider.",
+          "text": "Not quite. Check direction carefully: from broader class to specific member.",
           "hasChoice": true,
           "choices": [
             {
@@ -265,7 +287,7 @@
       "lines": [
         {
           "speakerName": "Echo",
-          "text": "A paraphrase must preserve meaning, not replace it. Try once more.",
+          "text": "Not quite. Negating 'every' means at least one counterexample exists.",
           "hasChoice": true,
           "choices": [
             {
