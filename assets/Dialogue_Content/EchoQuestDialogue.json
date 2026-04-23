@@ -1,0 +1,298 @@
+{
+  "startNodeId": "start",
+  "nodes": [
+    {
+      "nodeId": "start",
+      "lines": [
+        {
+          "speakerName": "Echo",
+          "text": "Welcome to the Corridor of Meaning. Solve five language riddles. Each has one true answer. If you fail, you must reason again.",
+          "hasChoice": true,
+          "choices": [
+            {
+              "choiceText": "Begin the trial.",
+              "nextNodeId": "q1",
+              "humanityModifier": 0
+            },
+            {
+              "choiceText": "Wait. Remind me of the rule.",
+              "nextNodeId": "rule_reminder",
+              "humanityModifier": 0
+            },
+            {
+              "choiceText": "I am not ready.",
+              "nextNodeId": "rule_reminder",
+              "humanityModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "rule_reminder",
+      "lines": [
+        {
+          "speakerName": "Echo",
+          "text": "One answer is correct in each riddle. Choose with care. Errors return you to the same question.",
+          "hasChoice": true,
+          "choices": [
+            {
+              "choiceText": "Understood. Begin.",
+              "nextNodeId": "q1",
+              "humanityModifier": 0
+            },
+            {
+              "choiceText": "Repeat the reminder.",
+              "nextNodeId": "rule_reminder",
+              "humanityModifier": 0
+            },
+            {
+              "choiceText": "Leave for now.",
+              "nextNodeId": "q1",
+              "humanityModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "q1",
+      "lines": [
+        {
+          "speakerName": "Echo",
+          "text": "Riddle 1 (logical entailment): Premises: 'Every archivist who decoded the cipher annotated at least one fragment.' and 'Mira decoded the cipher.' Which statement must be true?",
+          "hasChoice": true,
+          "choices": [
+            {
+              "choiceText": "Mira annotated at least one fragment.",
+              "nextNodeId": "q1_wrong",
+              "humanityModifier": 0
+            },
+            {
+              "choiceText": "If Mira is an archivist, then Mira annotated at least one fragment.",
+              "nextNodeId": "q2",
+              "humanityModifier": 0
+            },
+            {
+              "choiceText": "Mira is an archivist.",
+              "nextNodeId": "q1_wrong",
+              "humanityModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "q1_wrong",
+      "lines": [
+        {
+          "speakerName": "Echo",
+          "text": "Not quite. Two words can be related without sharing meaning. Try again.",
+          "hasChoice": true,
+          "choices": [
+            {
+              "choiceText": "Retry riddle 1.",
+              "nextNodeId": "q1",
+              "humanityModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "q2",
+      "lines": [
+        {
+          "speakerName": "Echo",
+          "text": "Riddle 2 (coreference): In the sentence 'The trophy does not fit in the suitcase because it is too small,' what does 'it' most likely refer to?",
+          "hasChoice": true,
+          "choices": [
+            {
+              "choiceText": "the trophy",
+              "nextNodeId": "q2_wrong",
+              "humanityModifier": 0
+            },
+            {
+              "choiceText": "the suitcase",
+              "nextNodeId": "q3",
+              "humanityModifier": 0
+            },
+            {
+              "choiceText": "both equally",
+              "nextNodeId": "q2_wrong",
+              "humanityModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "q2_wrong",
+      "lines": [
+        {
+          "speakerName": "Echo",
+          "text": "A pronoun follows meaning, not just position. Choose again.",
+          "hasChoice": true,
+          "choices": [
+            {
+              "choiceText": "Retry riddle 2.",
+              "nextNodeId": "q2",
+              "humanityModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "q3",
+      "lines": [
+        {
+          "speakerName": "Echo",
+          "text": "Riddle 3 (scope and focus): Which claim is guaranteed by the sentence 'Only Lina said Omar solved the puzzle.'?",
+          "hasChoice": true,
+          "choices": [
+            {
+              "choiceText": "Lina solved the puzzle.",
+              "nextNodeId": "q3_wrong",
+              "humanityModifier": 0
+            },
+            {
+              "choiceText": "Lina said Omar solved the puzzle.",
+              "nextNodeId": "q4",
+              "humanityModifier": 0
+            },
+            {
+              "choiceText": "No one else solved any puzzle.",
+              "nextNodeId": "q3_wrong",
+              "humanityModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "q3_wrong",
+      "lines": [
+        {
+          "speakerName": "Echo",
+          "text": "Form and agreement matter. Let grammar guide you back.",
+          "hasChoice": true,
+          "choices": [
+            {
+              "choiceText": "Retry riddle 3.",
+              "nextNodeId": "q3",
+              "humanityModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "q4",
+      "lines": [
+        {
+          "speakerName": "Echo",
+          "text": "Riddle 4 (lexical semantics): Which pair has a hypernym-hyponym relation in the correct direction?",
+          "hasChoice": true,
+          "choices": [
+            {
+              "choiceText": "sparrow -> bird",
+              "nextNodeId": "q4_wrong",
+              "humanityModifier": 0
+            },
+            {
+              "choiceText": "bird -> sparrow",
+              "nextNodeId": "q5",
+              "humanityModifier": 0
+            },
+            {
+              "choiceText": "metal -> element",
+              "nextNodeId": "q4_wrong",
+              "humanityModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "q4_wrong",
+      "lines": [
+        {
+          "speakerName": "Echo",
+          "text": "Look for category, not sound. Meaning reveals the outsider.",
+          "hasChoice": true,
+          "choices": [
+            {
+              "choiceText": "Retry riddle 4.",
+              "nextNodeId": "q4",
+              "humanityModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "q5",
+      "lines": [
+        {
+          "speakerName": "Echo",
+          "text": "Riddle 5 (quantifiers and negation): Which statement is logically equivalent to 'Not every model trained on noisy data failed'?",
+          "hasChoice": true,
+          "choices": [
+            {
+              "choiceText": "No model trained on noisy data failed.",
+              "nextNodeId": "q5_wrong",
+              "humanityModifier": 0
+            },
+            {
+              "choiceText": "Every model trained on noisy data succeeded.",
+              "nextNodeId": "q5_wrong",
+              "humanityModifier": 0
+            },
+            {
+              "choiceText": "At least one model trained on noisy data did not fail.",
+              "nextNodeId": "completed",
+              "humanityModifier": 1,
+              "marksIslandComplete": true,
+              "completedIslandIndex": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "q5_wrong",
+      "lines": [
+        {
+          "speakerName": "Echo",
+          "text": "A paraphrase must preserve meaning, not replace it. Try once more.",
+          "hasChoice": true,
+          "choices": [
+            {
+              "choiceText": "Retry riddle 5.",
+              "nextNodeId": "q5",
+              "humanityModifier": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nodeId": "completed",
+      "lines": [
+        {
+          "speakerName": "Echo",
+          "text": "Well reasoned. You have untangled the language knots. The NLP island recognizes your clarity.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Echo",
+          "text": "Return to the main island task board. A new star should now answer your name.",
+          "hasChoice": false,
+          "choices": []
+        }
+      ]
+    }
+  ]
+}

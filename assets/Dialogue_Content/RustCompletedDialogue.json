@@ -1,0 +1,22 @@
+{
+  "startNodeId": "start",
+  "nodes": [
+    {
+      "nodeId": "start",
+      "lines": [
+        {
+          "speakerName": "Rust",
+          "text": "You lasted through the Gauntlet and proved you can adapt under pressure. That is no small feat.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Rust",
+          "text": "Return to the main island task board. Your completed trial should light another star.",
+          "hasChoice": false,
+          "choices": []
+        }
+      ]
+    }
+  ]
+}

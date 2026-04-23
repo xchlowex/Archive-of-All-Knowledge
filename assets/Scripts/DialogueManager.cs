@@ -163,6 +163,12 @@ public class DialogueManager : MonoBehaviour
         {
             GameManager.Instance?.ModifyHumanity(choice.humanityModifier);
         }
+
+        // Optional quest completion hook from dialogue data.
+        if (choice.marksIslandComplete && choice.completedIslandIndex >= 0)
+        {
+            GameManager.Instance?.CompleteStar(choice.completedIslandIndex);
+        }
         
         // Clear choices
         foreach (Transform child in choicePanel.transform)

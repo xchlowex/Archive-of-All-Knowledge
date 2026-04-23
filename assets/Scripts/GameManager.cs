@@ -36,6 +36,11 @@ public class GameManager : MonoBehaviour
     {
         if (islandIndex >= 0 && islandIndex < starCompletion.Length)
         {
+            if (starCompletion[islandIndex] == 1)
+            {
+                return;
+            }
+
             starCompletion[islandIndex] = 1;
             OnStarCompleted?.Invoke(islandIndex, true);
             

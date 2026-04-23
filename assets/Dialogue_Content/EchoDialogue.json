@@ -6,7 +6,19 @@
       "lines": [
         {
           "speakerName": "Echo",
-          "text": "Welcome, traveler. I am the keeper of words, the guardian of meaning. Our island thrives on communication, on stories, on the exchange of ideas. But lately, confusion has spread. People misunderstand each other. Arguments flare over nothing. The threads of logic have become tangled. I believe this chaos is a test—a riddle that must be solved. Will you help me untangle these knots by solving a few puzzles? Clear thinking can restore clear communication.",
+          "text": "Welcome, traveler. I am the keeper of words, the guardian of meaning. Our island thrives on communication, on stories, on the exchange of ideas.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Echo",
+          "text": "But lately, confusion has spread. People misunderstand each other. Arguments flare over nothing. The threads of logic have become tangled.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Echo",
+          "text": "I believe this chaos is a test-a riddle that must be solved. Will you help me untangle these knots by solving a few puzzles? Clear thinking can restore clear communication.",
           "hasChoice": true,
           "choices": [
             {
@@ -16,7 +28,7 @@
             },
             {
               "choiceText": "I’d rather not right now.",
-              "nextNodeId": "wait",
+              "nextNodeId": "accepted",
               "humanityModifier": 0
             }
           ]
@@ -31,15 +43,10 @@
           "text": "Excellent. Listen carefully, think clearly, and do not rush. The answers are already there if you reason them out.",
           "hasChoice": false,
           "choices": []
-        }
-      ]
-    },
-    {
-      "nodeId": "wait",
-      "lines": [
+        },
         {
           "speakerName": "Echo",
-          "text": "Of course. Words wait for no one, but they also do not force themselves upon the unwilling. Return when your mind is ready.",
+          "text": "To complete this island, follow the path to your right and enter the corridor. Your quest awaits there.",
           "hasChoice": false,
           "choices": []
         }

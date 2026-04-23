@@ -18,6 +18,8 @@ public class DialogueChoice
     public string choiceText;
     public string nextNodeId;      // For branching dialogue
     public int humanityModifier;    // -1 for AI, +1 for human
+    public bool marksIslandComplete;
+    public int completedIslandIndex = -1;
 }
 
 [Serializable]
