@@ -6,7 +6,25 @@
       "lines": [
         {
           "speakerName": "Lumen",
-          "text": "Ah... a new presence. I feel you there. Don't be startled by my blindness—I see more than you might think. Our island was not always dark. Long ago, we had the most beautiful sunsets. Then the Great Dimming came. Our light source, the Luminous Heart, was hidden deep within the maze. Without it, we've lived in shadow ever since. Some say the maze is impossible to navigate in darkness. But I feel something different about you. A light within. Will you try to find the Luminous Heart for us?",
+          "text": "Ah... a new presence. I feel you there. Do not be startled by my blindness-I see more than you might think.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Lumen",
+          "text": "Our island was not always dark. Long ago, we had the most beautiful sunsets. Then the Great Dimming came.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Lumen",
+          "text": "Our light source, the Luminous Heart, was hidden deep within the maze. Without it, we have lived in shadow ever since.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Lumen",
+          "text": "Some say the maze is impossible to navigate in darkness. But I feel something different about you-a light within. Will you try to find the Luminous Heart for us?",
           "hasChoice": true,
           "choices": [
             {
@@ -28,7 +46,13 @@
       "lines": [
         {
           "speakerName": "Lumen",
-          "text": "Thank you, traveler. Follow the faint sounds and the soft glow. The maze will resist you, but the Heart is waiting for someone willing to keep going.",
+          "text": "Thank you, traveler. Follow the faint sounds and the soft glow.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Lumen",
+          "text": "The maze will resist you, but the Heart is waiting for someone willing to keep going.",
           "hasChoice": false,
           "choices": []
         }
