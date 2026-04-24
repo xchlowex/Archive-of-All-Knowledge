@@ -1,16 +1,10 @@
 using UnityEngine;
-#if UNITY_RENDER_PIPELINE_UNIVERSAL
 using UnityEngine.Rendering.Universal;
-#endif
 
 public class GlobalLightController : MonoBehaviour
 {
     [Header("Target Light")]
-#if UNITY_RENDER_PIPELINE_UNIVERSAL
     [SerializeField] private Light2D globalLight;
-#else
-    [SerializeField] private Light globalLight;
-#endif
 
     [Header("Debug")]
     [SerializeField] private bool debugLogs = true;
@@ -26,24 +20,18 @@ public class GlobalLightController : MonoBehaviour
 
     private Coroutine runningTransition;
 
-    public float CurrentIntensity => GetCurrentIntensity();
+    public float CurrentIntensity => globalLight != null ? globalLight.intensity : -1f;
 
     private void Awake()
     {
         if (globalLight == null)
         {
-            globalLight = GetComponent<
-#if UNITY_RENDER_PIPELINE_UNIVERSAL
-                Light2D
-#else
-                Light
-#endif
-            >();
+            globalLight = GetComponent<Light2D>();
         }
 
         if (globalLight == null)
         {
-            Debug.LogError("GlobalLightController: No compatible light assigned on this object.");
+            Debug.LogError("GlobalLightController: No Light2D assigned.");
             enabled = false;
             return;
         }
@@ -56,14 +44,11 @@ public class GlobalLightController : MonoBehaviour
             maxIntensity = temp;
         }
 
-        SetIntensity(Mathf.Clamp(GetCurrentIntensity(), minIntensity, maxIntensity));
+        globalLight.intensity = Mathf.Clamp(globalLight.intensity, minIntensity, maxIntensity);
 
         if (debugLogs)
         {
-            Debug.Log($"GlobalLightController ready on '{name}'. Target Light: '{globalLight.name}', intensity: {GetCurrentIntensity():F2}, min: {minIntensity:F2}, max: {maxIntensity:F2}");
-#if !UNITY_RENDER_PIPELINE_UNIVERSAL
-            Debug.LogWarning("GlobalLightController: URP is not active in this project. Using UnityEngine.Light fallback instead of Light2D.");
-#endif
+            Debug.Log($"GlobalLightController ready on '{name}'. Target Light: '{globalLight.name}', intensity: {globalLight.intensity:F2}, min: {minIntensity:F2}, max: {maxIntensity:F2}");
         }
     }
 
@@ -88,7 +73,7 @@ public class GlobalLightController : MonoBehaviour
             Debug.LogWarning($"GlobalLightController: Increase amount is {amount:F2}. It should be > 0 to brighten the scene.");
         }
 
-        float currentIntensity = GetCurrentIntensity();
+        float currentIntensity = globalLight.intensity;
         float targetIntensity = Mathf.Clamp(currentIntensity + amount, minIntensity, maxIntensity);
 
         if (debugLogs)
@@ -102,7 +87,7 @@ public class GlobalLightController : MonoBehaviour
 
         if (!smoothTransition || transitionDuration <= 0f)
         {
-            SetIntensity(targetIntensity);
+            globalLight.intensity = targetIntensity;
             return;
         }
 
@@ -116,31 +101,18 @@ public class GlobalLightController : MonoBehaviour
 
     private System.Collections.IEnumerator AnimateIntensity(float target)
     {
-        float start = GetCurrentIntensity();
+        float start = globalLight.intensity;
         float elapsed = 0f;
 
         while (elapsed < transitionDuration)
         {
             elapsed += Time.deltaTime;
             float t = Mathf.Clamp01(elapsed / transitionDuration);
-            SetIntensity(Mathf.Lerp(start, target, t));
+            globalLight.intensity = Mathf.Lerp(start, target, t);
             yield return null;
         }
 
-        SetIntensity(target);
+        globalLight.intensity = target;
         runningTransition = null;
-    }
-
-    private float GetCurrentIntensity()
-    {
-        return globalLight != null ? globalLight.intensity : -1f;
-    }
-
-    private void SetIntensity(float value)
-    {
-        if (globalLight != null)
-        {
-            globalLight.intensity = value;
-        }
     }
 }
