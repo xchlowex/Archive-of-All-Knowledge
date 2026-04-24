@@ -6,7 +6,7 @@ public class EnemyAI : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float speed; 
-    public float stopDistance; // How close to the tile center before moving to next
+    public float stopDistance; 
 
     [Header("Battle Settings")]
     public float attackRange;
@@ -20,17 +20,10 @@ public class EnemyAI : MonoBehaviour
     private bool _isChasing = false;
     private float _nextAttackTime;
 
-    // BFS Variables
     private List<Vector3Int> pathToPlayer = new List<Vector3Int>();
     private Dictionary<Vector3Int, Vector3Int> prevCellMap;
     private Vector3Int lastPlayerCell;
     private Vector3Int lastMonsterCell;
-
-    void Start()
-    {
-        // We still need to initialize our starting grid position
-        lastMonsterCell = GetCell(transform.position);
-    }
 
     void Update()
     {
@@ -43,11 +36,12 @@ public class EnemyAI : MonoBehaviour
 
             if (distance > attackRange)
             {
-                // BFS Logic: Re-calculate if someone moved tiles
+                Debug.Log("Current Distance: " + distance + " | Attack Range: " + attackRange);
+                // Re-calculate if player or monster moved tiles
                 if (currentPlayerCell != lastPlayerCell || currentMonsterCell != lastMonsterCell || pathToPlayer.Count == 0)
                 {
                     FindPathToPlayer(currentMonsterCell, currentPlayerCell);
-                    UpdatePathList(currentPlayerCell);
+                    UpdatePathList(currentMonsterCell, currentPlayerCell);
                     
                     lastPlayerCell = currentPlayerCell;
                     lastMonsterCell = currentMonsterCell;
@@ -56,8 +50,28 @@ public class EnemyAI : MonoBehaviour
             }
             else if (Time.time >= _nextAttackTime)
             {
+                Debug.Log("Current Distance: " + distance + " | Attack Range: " + attackRange);
                 Attack();
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            _player = other.transform;
+            _isChasing = true;
+        }
+    }
+    
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            _isChasing = false;
+            _player = null;
+            pathToPlayer.Clear();
         }
     }
 
@@ -87,15 +101,19 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    void UpdatePathList(Vector3Int destination)
+    void UpdatePathList(Vector3Int start, Vector3Int destination)
     {
         pathToPlayer.Clear();
-        Vector3Int current = destination;
+        if (prevCellMap == null || !prevCellMap.ContainsKey(destination)) return;
 
-        while (prevCellMap != null && prevCellMap.ContainsKey(current))
+        Vector3Int current = destination;
+        while (current != start)
         {
             pathToPlayer.Add(current);
-            current = prevCellMap[current];
+            if (prevCellMap.ContainsKey(current))
+                current = prevCellMap[current];
+            else
+                break;
         }
         pathToPlayer.Reverse();
     }
@@ -107,7 +125,7 @@ public class EnemyAI : MonoBehaviour
             Vector3 targetWorldPos = walkableTilemap.GetCellCenterWorld(pathToPlayer[0]);
             transform.position = Vector3.MoveTowards(transform.position, targetWorldPos, speed * Time.deltaTime);
 
-            if (Vector3.Distance(transform.position, targetWorldPos) < stopDistance)
+            if (Vector2.Distance(transform.position, targetWorldPos) < stopDistance)
             {
                 pathToPlayer.RemoveAt(0);
             }
@@ -122,6 +140,7 @@ public class EnemyAI : MonoBehaviour
         foreach (var dir in directions)
         {
             Vector3Int checkPos = current + dir;
+            // The logic: if the ghost map has a tile here, the robot can walk here
             if (walkableTilemap.HasTile(checkPos))
             {
                 neighbors.Add(checkPos);
@@ -134,16 +153,38 @@ public class EnemyAI : MonoBehaviour
 
     private void Attack()
     {
-        if(anim != null) anim.SetTrigger("OnAttack");
-        _nextAttackTime = Time.time + attackCooldown;
-    }
+        SpriteRenderer sr = GetComponentInChildren<SpriteRenderer>();
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            _player = other.transform;
-            _isChasing = true;
+        if (sr != null && _player!= null){
+            if (anim != null)
+            {
+            
+                    // if(_player.position.x < transform.position.x){
+                // if (_player.position.x < transform.position.x)
+                        sr.flipX = (_player.position.x < transform.position.x);
+                        // anim.SetTrigger("OnAttack");
+                        // sr.flipX = false;
+                    // }
+                    // else
+                    // {
+                        anim.SetTrigger("OnAttack");
+                    // }
+                    Debug.Log("Robot Attacking!");
+                }
+            
+            _nextAttackTime = Time.time + attackCooldown;
         }
     }
+
+    // This helps you SEE the path in the Scene View
+    void OnDrawGizmos()
+    {
+        if (pathToPlayer == null || pathToPlayer.Count == 0 || walkableTilemap == null) return;
+        Gizmos.color = Color.cyan;
+        foreach (var cell in pathToPlayer)
+        {
+            Gizmos.DrawSphere(walkableTilemap.GetCellCenterWorld(cell), 0.2f);
+        }
+    }
+    
 }

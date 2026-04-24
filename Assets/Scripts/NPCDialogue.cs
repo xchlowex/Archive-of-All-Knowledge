@@ -13,7 +13,8 @@ public class NPCDialogue : MonoBehaviour, IInteractable
 
     [Header("UI")]
     [SerializeField] private GameObject interactionPrompt;
-
+    [SerializeField] private Animator anim;
+    
     private DialogueData runtimeJsonDialogue;
 
     private void Start()
@@ -55,6 +56,14 @@ public class NPCDialogue : MonoBehaviour, IInteractable
         {
             interactionPrompt.SetActive(true);
         }
+        if (anim != null)
+        {
+            // Check if the Animator has the 'isGreeting' parameter to avoid errors
+            // if (HasParameter("isGreeting", anim))
+            // {
+                anim.SetBool("isGreeting", true);
+            // }
+        }
     }
 
     public void HidePrompt()
@@ -62,6 +71,7 @@ public class NPCDialogue : MonoBehaviour, IInteractable
         if (interactionPrompt != null)
         {
             interactionPrompt.SetActive(false);
+            anim.SetBool("isGreeting", false);
         }
     }
 
