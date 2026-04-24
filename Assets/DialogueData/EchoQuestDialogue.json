@@ -310,7 +310,7 @@
         },
         {
           "speakerName": "Echo",
-          "text": "Return to the main island task board. A new star should now answer your name.",
+          "text": "Return to the main island. A new star should now answer your name.",
           "hasChoice": false,
           "choices": []
         }
