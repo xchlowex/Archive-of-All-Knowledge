@@ -1,10 +1,16 @@
 using UnityEngine;
+#if UNITY_RENDER_PIPELINE_UNIVERSAL
 using UnityEngine.Rendering.Universal;
+#endif
 
 public class GlobalLightController : MonoBehaviour
 {
     [Header("Target Light")]
+#if UNITY_RENDER_PIPELINE_UNIVERSAL
     [SerializeField] private Light2D globalLight;
+#else
+    [SerializeField] private Light globalLight;
+#endif
 
     [Header("Debug")]
     [SerializeField] private bool debugLogs = true;
@@ -20,18 +26,24 @@ public class GlobalLightController : MonoBehaviour
 
     private Coroutine runningTransition;
 
-    public float CurrentIntensity => globalLight != null ? globalLight.intensity : -1f;
+    public float CurrentIntensity => GetCurrentIntensity();
 
     private void Awake()
     {
         if (globalLight == null)
         {
-            globalLight = GetComponent<Light2D>();
+            globalLight = GetComponent<
+#if UNITY_RENDER_PIPELINE_UNIVERSAL
+                Light2D
+#else
+                Light
+#endif
+            >();
         }
 
         if (globalLight == null)
         {
-            Debug.LogError("GlobalLightController: No Light2D assigned.");
+            Debug.LogError("GlobalLightController: No compatible light assigned on this object.");
             enabled = false;
             return;
         }
@@ -44,11 +56,14 @@ public class GlobalLightController : MonoBehaviour
             maxIntensity = temp;
         }
 
-        globalLight.intensity = Mathf.Clamp(globalLight.intensity, minIntensity, maxIntensity);
+        SetIntensity(Mathf.Clamp(GetCurrentIntensity(), minIntensity, maxIntensity));
 
         if (debugLogs)
         {
-            Debug.Log($"GlobalLightController ready on '{name}'. Target Light: '{globalLight.name}', intensity: {globalLight.intensity:F2}, min: {minIntensity:F2}, max: {maxIntensity:F2}");
+            Debug.Log($"GlobalLightController ready on '{name}'. Target Light: '{globalLight.name}', intensity: {GetCurrentIntensity():F2}, min: {minIntensity:F2}, max: {maxIntensity:F2}");
+#if !UNITY_RENDER_PIPELINE_UNIVERSAL
+            Debug.LogWarning("GlobalLightController: URP is not active in this project. Using UnityEngine.Light fallback instead of Light2D.");
+#endif
         }
     }
 
@@ -73,7 +88,7 @@ public class GlobalLightController : MonoBehaviour
             Debug.LogWarning($"GlobalLightController: Increase amount is {amount:F2}. It should be > 0 to brighten the scene.");
         }
 
-        float currentIntensity = globalLight.intensity;
+        float currentIntensity = GetCurrentIntensity();
         float targetIntensity = Mathf.Clamp(currentIntensity + amount, minIntensity, maxIntensity);
 
         if (debugLogs)
@@ -87,7 +102,7 @@ public class GlobalLightController : MonoBehaviour
 
         if (!smoothTransition || transitionDuration <= 0f)
         {
-            globalLight.intensity = targetIntensity;
+            SetIntensity(targetIntensity);
             return;
         }
 
@@ -101,18 +116,31 @@ public class GlobalLightController : MonoBehaviour
 
     private System.Collections.IEnumerator AnimateIntensity(float target)
     {
-        float start = globalLight.intensity;
+        float start = GetCurrentIntensity();
         float elapsed = 0f;
 
         while (elapsed < transitionDuration)
         {
             elapsed += Time.deltaTime;
             float t = Mathf.Clamp01(elapsed / transitionDuration);
-            globalLight.intensity = Mathf.Lerp(start, target, t);
+            SetIntensity(Mathf.Lerp(start, target, t));
             yield return null;
         }
 
-        globalLight.intensity = target;
+        SetIntensity(target);
         runningTransition = null;
+    }
+
+    private float GetCurrentIntensity()
+    {
+        return globalLight != null ? globalLight.intensity : -1f;
+    }
+
+    private void SetIntensity(float value)
+    {
+        if (globalLight != null)
+        {
+            globalLight.intensity = value;
+        }
     }
 }
