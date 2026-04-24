@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f54bff8fed25d324a8270c5ad990da4f
+guid: 4236fedd4c3c2324fb40bdee96e4906d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PSB1-LumenSprite03-Mouthpng_no_bg_vdcd4vne_0
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 45
+        width: 319
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315c008f8a185d047817001ba87d06ad
+      internalID: -959533874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSB1-LumenSprite03-Mouthpng_no_bg_vdcd4vne_1
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 57
+        width: 344
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edbe1c1b0cd060849907a80cf20bf08c
+      internalID: 1534936004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PSB1-LumenSprite03-Mouthpng_no_bg_vdcd4vne_2
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 54
+        width: 323
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7def6a812479aa489ea947810eb3cfd
+      internalID: 313208102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +182,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PSB1-LumenSprite03-Mouthpng_no_bg_vdcd4vne_0: -959533874
+      PSB1-LumenSprite03-Mouthpng_no_bg_vdcd4vne_1: 1534936004
+      PSB1-LumenSprite03-Mouthpng_no_bg_vdcd4vne_2: 313208102
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
