@@ -227,6 +227,7 @@ MonoBehaviour:
   dialogueJsonResourcesPath: 
   dialogueJsonText: 
   interactionPrompt: {fileID: 1542827618}
+  anim: {fileID: 0}
 --- !u!61 &103991754
 BoxCollider2D:
   m_ObjectHideFlags: 0
