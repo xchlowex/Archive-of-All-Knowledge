@@ -177,7 +177,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -583677963
+  m_SortingLayerID: 1609578909
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f54bff8fed25d324a8270c5ad990da4f, type: 3}
@@ -261,7 +261,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -583677963
+  m_SortingLayerID: 1609578909
   m_SortingLayer: 1
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: d051e60ae75c64c4f80bb5246082fc84, type: 3}
@@ -302,6 +302,14 @@ PrefabInstance:
       propertyPath: dialogueJson
       value: 
       objectReference: {fileID: 4900000, guid: 71d7dbad6c7deff42b08f1eefb99dc38, type: 3}
+    - target: {fileID: 2433239442742435568, guid: 1ee97eac82da5044d845843947dc55b0, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433239442742435568, guid: 1ee97eac82da5044d845843947dc55b0, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1013238417
+      objectReference: {fileID: 0}
     - target: {fileID: 3271228870490171217, guid: 1ee97eac82da5044d845843947dc55b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.85
@@ -341,6 +349,14 @@ PrefabInstance:
     - target: {fileID: 3271228870490171217, guid: 1ee97eac82da5044d845843947dc55b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3514753325431082257, guid: 1ee97eac82da5044d845843947dc55b0, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3514753325431082257, guid: 1ee97eac82da5044d845843947dc55b0, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1013238417
       objectReference: {fileID: 0}
     - target: {fileID: 4598012042245127728, guid: 1ee97eac82da5044d845843947dc55b0, type: 3}
       propertyPath: m_Name
@@ -435,6 +451,14 @@ PrefabInstance:
     - target: {fileID: 760622627964376974, guid: a039a852de530b24f9c7e3cd2c4848d4, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 785845113240030082, guid: a039a852de530b24f9c7e3cd2c4848d4, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 785845113240030082, guid: a039a852de530b24f9c7e3cd2c4848d4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1030327957
       objectReference: {fileID: 0}
     - target: {fileID: 5874991102894998949, guid: a039a852de530b24f9c7e3cd2c4848d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -536,8 +560,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 370889227
-  m_SortingLayer: 2
+  m_SortingLayerID: 1013238417
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 260a0b58ff3818749b744e107d03c2db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -633,6 +657,7 @@ GameObject:
   - component: {fileID: 1339251655}
   - component: {fileID: 1339251654}
   - component: {fileID: 1339251653}
+  - component: {fileID: 1339251656}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -714,6 +739,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1339251656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339251652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1001 &1510673215
 PrefabInstance:
   m_ObjectHideFlags: 0
