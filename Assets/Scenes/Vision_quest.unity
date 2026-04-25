@@ -421,7 +421,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205458224}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
@@ -496,8 +496,6 @@ MonoBehaviour:
   minIntensity: 0.15
   maxIntensity: 1
   defaultIncreaseStep: 0.1
-  smoothTransition: 1
-  transitionDuration: 0.35
 --- !u!1001 &267135890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1960,6 +1958,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 760622627964376974, guid: a039a852de530b24f9c7e3cd2c4848d4, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 785845113240030082, guid: a039a852de530b24f9c7e3cd2c4848d4, type: 3}
       propertyPath: m_SortingLayer
       value: 5
@@ -1968,6 +1970,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1030327957
       objectReference: {fileID: 0}
+    - target: {fileID: 785845113240030082, guid: a039a852de530b24f9c7e3cd2c4848d4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 5874991102894998949, guid: a039a852de530b24f9c7e3cd2c4848d4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.01
