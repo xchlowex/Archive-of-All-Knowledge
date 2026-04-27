@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 529050090}
   - component: {fileID: 529050089}
   m_Layer: 0
-  m_Name: vision_island
+  m_Name: vision island music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

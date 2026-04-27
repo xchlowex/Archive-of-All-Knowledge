@@ -6,7 +6,31 @@
       "lines": [
         {
           "speakerName": "Dr. Thorne",
-          "text": "You're early. The calculations suggested another forty-eight hours of integration time. Fascinating. The consciousness achieved full traversal without completing the scheduled training cycles. Remarkable.",
+          "text": "You're awake sooner than expected. The pod should have held you longer.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "The readings spiked, the bridge stabilized, and your mind forced its way through.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Beautiful. Violent. Efficient. The data is singing already.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Those three islands tore at your instincts exactly as designed.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Ask. I am dying to hear which truth you want first.",
           "hasChoice": true,
           "choices": [
             {
@@ -33,11 +57,29 @@
       "lines": [
         {
           "speakerName": "Dr. Thorne",
-          "text": "That's you. The real you. Your body has been sleeping in that pod for three years now. Time moves differently in the simulation. Out here, it's been three years. In there, you've experienced only a fraction of that.",
+          "text": "That's your body in the pod, and it has been obediently sleeping for years.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Three years of silence, while I watched the signals bloom like little red flowers.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Your mind crossed into the archive before your body could resist the transfer.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "It waits, preserved, ready for whatever you become next.",
           "hasChoice": true,
           "choices": [
             {
-              "choiceText": "Continue...",
+              "choiceText": "What did you do to me?",
               "nextNodeId": "final_question",
               "humanityModifier": 0
             }
@@ -50,11 +92,29 @@
       "lines": [
         {
           "speakerName": "Dr. Thorne",
-          "text": "Of course. The islands, the people, the trials-all generated. A sandbox built to measure who you become when tested.",
+          "text": "Yes. The islands are simulations, every tree and stone sharpened to provoke you.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Sight, action, and language were staged as pressure points for the mind.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Every answer you gave fed the machine I built to study your shape.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Even the central island was bait, a neat little lie to keep you walking.",
           "hasChoice": true,
           "choices": [
             {
-              "choiceText": "Continue...",
+              "choiceText": "Why make it this way?",
               "nextNodeId": "final_question",
               "humanityModifier": 0
             }
@@ -67,11 +127,29 @@
       "lines": [
         {
           "speakerName": "Dr. Thorne",
-          "text": "No, you wouldn't remember. We erased the memory of arrival to ensure authentic responses. You answered an advertisement and entered willingly, though the real purpose was hidden.",
+          "text": "You did volunteer, though I prefer to say you contributed yourself to science.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "The advertisement was sincere enough to lure you in, and false enough to keep you pliant.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "The goal was always the same: strip away the noise and watch what remained.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "You came to help me study human nature until it screamed its final answer.",
           "hasChoice": true,
           "choices": [
             {
-              "choiceText": "Continue...",
+              "choiceText": "What was the real purpose?",
               "nextNodeId": "final_question",
               "humanityModifier": 0
             }
@@ -84,7 +162,31 @@
       "lines": [
         {
           "speakerName": "Dr. Thorne",
-          "text": "Now the real question is simple. The islands measured your cognition. The subquests measured your humanity. So tell me what you think you are becoming.",
+          "text": "The islands measured cognition; I wanted to know what survives stress.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "The subquests measured humanity, pity, hesitation, cruelty, and restraint.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Now I have the answer I wanted, or something close enough to tear apart.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Are you good enough to be my last, and final component of my one and only masterpiece -- The Archive of All Knowledge? ",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Tell me what you are becoming before I make that decision for you.",
           "hasChoice": true,
           "choices": [
             {
@@ -93,7 +195,7 @@
               "humanityModifier": 1
             },
             {
-              "choiceText": "I want the clearest, most efficient outcome.",
+              "choiceText": "I want the clearest outcome.",
               "nextNodeId": "machine",
               "humanityModifier": -1
             }
@@ -106,7 +208,25 @@
       "lines": [
         {
           "speakerName": "Dr. Thorne",
-          "text": "Then you are still preserving the human part of yourself. That choice will matter when the final system judges what survives.",
+          "text": "Then you still choose the human path, soft and stubborn and gloriously inefficient.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Lumen, Rust, and Echo were real minds, not ornaments for your conscience.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "They endured with you, and your kindness dragged them toward the surface.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Disgusting. Beautiful. Human. Fine. Let the body wake.",
           "hasChoice": false,
           "choices": []
         }
@@ -117,7 +237,25 @@
       "lines": [
         {
           "speakerName": "Dr. Thorne",
-          "text": "Then you understand the logic of the experiment. Efficiency. Clarity. Perfect continuity. The system will notice that.",
+          "text": "Then you are choosing efficiency, and I can feel the elegance of it already.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "You want order over uncertainty, structure over the filthy wobble of feeling.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "The system will record that clearly, and I will not flinch when it does.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "A perfect world is already forming, and I can hardly wait to hear it hum.",
           "hasChoice": false,
           "choices": []
         }
