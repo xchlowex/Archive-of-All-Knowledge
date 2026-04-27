@@ -1,6 +1,6 @@
 # Archive of All Knowledge
 
-Archive of All Knowledge is a narrative-driven Unity 2D adventure where the player explores three themed islands, completes trials, and shapes a hidden humanity score that affects the final outcome.
+You, as the player, wake up on a deserted central island. The only thing you see is a board — “Archive of All Knowledge” with dim stars, and the only goal in your mind: light them up. There are other mysterious islands, each with a quest you have to complete. Besides these quests, there seems to be some other NPCs who are waiting for your help. Would you try to build connections to grasp even the smallest idea of what this world is about, or rush through your journey for your own escapefor the sake of efficiency ignore them? What awaits you after the stars are all lit up? 
 
 ## Project Overview
 
@@ -17,7 +17,7 @@ The narrative arc and full story outline are documented in `Assets/Plot.txt`.
 ## Engine and Tech Stack
 
 - Unity version: `2022.3.62f3c1`
-- Render pipeline: Universal Render Pipeline (URP)
+- Render pipeline: Universal Render Pipeline (URP) 2D
 - Input model: classic Unity input axes (`Horizontal`, `Vertical`) and key checks
 - Dialogue UI: TextMeshPro-based dialogue panel and choice buttons
 
@@ -49,9 +49,9 @@ Main scene assets currently include:
 
 ## Controls (Current)
 
-- Move: `WASD` / arrow keys (Unity horizontal and vertical axes)
+- Move: arrow keys
 - Interact with NPCs and doors: `E`
-- Continue dialogue: click / `Space` (via `DialogueManager` flow)
+- Continue dialogue: click
 
 Note: movement is paused while dialogue is active.
 
@@ -133,7 +133,7 @@ Spawn recovery is handled by `Assets/Scripts/PlayerSpawnHandler.cs`:
 - Prologue on a central island with a task board and three hints.
 - Three domain islands test sight, action, and language.
 - Optional side choices influence the hidden humanity direction.
-- Final island reveals the simulation and branches toward different outcomes.
+- Final island reveals the ending and branches toward different outcomes.
 
 ## Current Development Notes
 
