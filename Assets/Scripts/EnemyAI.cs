@@ -25,18 +25,6 @@ public class EnemyAI : MonoBehaviour
     private Vector3Int lastPlayerCell;
     private Vector3Int lastMonsterCell;
 
-    void Start()
-    {
-        if (walkableTilemap == null)
-        {
-            // Search for any object tagged "Walkable"
-            GameObject floorObj = GameObject.FindWithTag("Tilemap");
-            if (floorObj != null)
-            {
-                walkableTilemap = floorObj.GetComponent<UnityEngine.Tilemaps.Tilemap>();
-            }
-        }
-    }
     void Update()
     {
         if (_isChasing && _player != null)
@@ -48,7 +36,7 @@ public class EnemyAI : MonoBehaviour
 
             if (distance > attackRange)
             {
-                // Debug.Log("Current Distance: " + distance + " | Attack Range: " + attackRange);
+                Debug.Log("Current Distance: " + distance + " | Attack Range: " + attackRange);
                 // Re-calculate if player or monster moved tiles
                 if (currentPlayerCell != lastPlayerCell || currentMonsterCell != lastMonsterCell || pathToPlayer.Count == 0)
                 {
@@ -62,7 +50,7 @@ public class EnemyAI : MonoBehaviour
             }
             else if (Time.time >= _nextAttackTime)
             {
-                // Debug.Log("Current Distance: " + distance + " | Attack Range: " + attackRange);
+                Debug.Log("Current Distance: " + distance + " | Attack Range: " + attackRange);
                 Attack();
             }
         }
@@ -76,17 +64,6 @@ public class EnemyAI : MonoBehaviour
             _isChasing = true;
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Enemy collided with player, dealing damage!");
-            Attack();
-            collision.gameObject.GetComponent<Health>()?.TakeDamage(1);
-            // other.GetComponent<Health>()?.TakeDamage(1);
-        }
-    }
     
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -97,43 +74,27 @@ public class EnemyAI : MonoBehaviour
             pathToPlayer.Clear();
         }
     }
-    float GetHeuristic(Vector3Int a, Vector3Int b)
-    {
-        // Manhattan distance is faster for grid-based games than Euclidean distance
-        return Mathf.Abs(a.x - b.x) + Mathf.Abs(a.y - b.y);
-    }
 
     void FindPathToPlayer(Vector3Int start, Vector3Int destination)
     {
         prevCellMap = new Dictionary<Vector3Int, Vector3Int>();
-        Dictionary<Vector3Int, float> costSoFar = new Dictionary<Vector3Int, float>();
-        
-        // List of cells to check, sorted by priority (fScore)
-        List<KeyValuePair<Vector3Int, float>> openList = new List<KeyValuePair<Vector3Int, float>>();
+        Queue<Vector3Int> planTravelCells = new Queue<Vector3Int>();
+        HashSet<Vector3Int> visitedCells = new HashSet<Vector3Int>();
 
-        openList.Add(new KeyValuePair<Vector3Int, float>(start, 0));
-        prevCellMap[start] = start;
-        costSoFar[start] = 0;
+        planTravelCells.Enqueue(start);
+        visitedCells.Add(start);
 
-        while (openList.Count > 0)
+        while (planTravelCells.Count > 0)
         {
-            // 1. Sort by the lowest fScore (Heuristic + Actual Cost) and take the best one
-            openList.Sort((x, y) => x.Value.CompareTo(y.Value));
-            Vector3Int current = openList[0].Key;
-            openList.RemoveAt(0);
-
+            Vector3Int current = planTravelCells.Dequeue();
             if (current == destination) return;
 
             foreach (Vector3Int neighbor in GetNeighbors(current))
             {
-                float newCost = costSoFar[current] + 1; // 1 is the cost of moving 1 tile
-
-                if (!costSoFar.ContainsKey(neighbor) || newCost < costSoFar[neighbor])
+                if (!visitedCells.Contains(neighbor))
                 {
-                    costSoFar[neighbor] = newCost;
-                    // Priority = Cost to get here + Estimated distance to player
-                    float priority = newCost + GetHeuristic(neighbor, destination);
-                    openList.Add(new KeyValuePair<Vector3Int, float>(neighbor, priority));
+                    visitedCells.Add(neighbor);
+                    planTravelCells.Enqueue(neighbor);
                     prevCellMap[neighbor] = current;
                 }
             }
@@ -162,8 +123,6 @@ public class EnemyAI : MonoBehaviour
         if (pathToPlayer.Count > 0)
         {
             Vector3 targetWorldPos = walkableTilemap.GetCellCenterWorld(pathToPlayer[0]);
-            
-            // Move with a slight smoothing
             transform.position = Vector3.MoveTowards(transform.position, targetWorldPos, speed * Time.deltaTime);
 
             if (Vector2.Distance(transform.position, targetWorldPos) < stopDistance)
@@ -227,12 +186,5 @@ public class EnemyAI : MonoBehaviour
             Gizmos.DrawSphere(walkableTilemap.GetCellCenterWorld(cell), 0.2f);
         }
     }
-
-    void OnDestroy() {
-        
-        Debug.Log($"{gameObject.name} destroyed. Scene: {gameObject.scene.name}");    
-        }
-
-    
     
 }
