@@ -1,0 +1,16 @@
+{
+  "startNodeId": "start",
+  "nodes": [
+    {
+      "nodeId": "start",
+      "lines": [
+        {
+          "speakerName": "Deadman",
+          "text": "Deadman is sleeping deeply.",
+          "hasChoice": false,
+          "choices": []
+        }
+      ]
+    }
+  ]
+}
