@@ -51,7 +51,7 @@ Main scene assets currently include:
 
 - Move: arrow keys
 - Interact with NPCs and doors: `E`
-- Continue dialogue: click
+- Continue dialogue: click/`space`
 
 Note: movement is paused while dialogue is active.
 
