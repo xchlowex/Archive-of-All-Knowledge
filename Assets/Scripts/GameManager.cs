@@ -70,4 +70,17 @@ public class GameManager : MonoBehaviour
             return starCompletion[islandIndex] == 1;
         return false;
     }
+
+    public bool AreAllStarsComplete()
+    {
+        foreach (int star in starCompletion)
+        {
+            if (star == 0)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }

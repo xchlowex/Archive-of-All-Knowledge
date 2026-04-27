@@ -1,4 +1,6 @@
 {
+  "completesIslandOnEnd": true,
+  "completedIslandIndex": 2,
   "startNodeId": "start",
   "nodes": [
     {
@@ -275,8 +277,8 @@
               "choiceText": "At least one model trained on noisy data did not fail.",
               "nextNodeId": "completed",
               "humanityModifier": 1,
-              "marksIslandComplete": true,
-              "completedIslandIndex": 2
+              "marksIslandComplete": false,
+              "completedIslandIndex": -1
             }
           ]
         }

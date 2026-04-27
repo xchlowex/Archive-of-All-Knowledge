@@ -6,6 +6,8 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+    private const string EvaluateHumanityNodeToken = "__EVALUATE_HUMANITY__";
+
     [Header("UI References")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI speakerText;
@@ -15,6 +17,11 @@ public class DialogueManager : MonoBehaviour
     
     [Header("Settings")]
     [SerializeField] private float textSpeed = 0.05f;
+
+    [Header("Ending Evaluation")]
+    [SerializeField] private int humanEndingThreshold = 0;
+    [SerializeField] private string humanEndingNodeId = "human";
+    [SerializeField] private string machineEndingNodeId = "machine";
     
     // State
     private DialogueData currentDialogue;
@@ -56,7 +63,8 @@ public class DialogueManager : MonoBehaviour
         if (startNode.lines == null || startNode.lines.Count == 0)
         {
             Debug.LogWarning($"StartDialogue found start node '{dialogue.startNodeId}' but it has no lines.");
-            return;
+                EndDialogue(false);
+                return;
         }
 
         currentDialogue = dialogue;
@@ -71,7 +79,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentNode == null || currentNode.lines == null || currentLineIndex >= currentNode.lines.Count)
         {
-            EndDialogue();
+            EndDialogue(false);
             return;
         }
         
@@ -174,25 +182,45 @@ public class DialogueManager : MonoBehaviour
         foreach (Transform child in choicePanel.transform)
             Destroy(child.gameObject);
         choicePanel.SetActive(false);
-        
+
+        string resolvedNextNodeId = ResolveNextNodeId(choice.nextNodeId);
+
         // Move to next node if specified
-        if (!string.IsNullOrEmpty(choice.nextNodeId))
+        if (!string.IsNullOrEmpty(resolvedNextNodeId))
         {
-            currentNode = currentDialogue.nodes.Find(node => node.nodeId == choice.nextNodeId);
+            currentNode = currentDialogue.nodes.Find(node => node.nodeId == resolvedNextNodeId);
+            if (currentNode == null)
+            {
+                Debug.LogWarning($"Dialogue node '{resolvedNextNodeId}' was not found.");
+                EndDialogue(false);
+                return;
+            }
+
             currentLineIndex = 0;
             DisplayCurrentLine();
         }
         else
         {
-            EndDialogue();
+            EndDialogue(false);
         }
+    }
+
+    private string ResolveNextNodeId(string nextNodeId)
+    {
+        if (nextNodeId != EvaluateHumanityNodeToken)
+        {
+            return nextNodeId;
+        }
+
+        int humanityScore = GameManager.Instance != null ? GameManager.Instance.GetHumanityScore() : 0;
+        return humanityScore >= humanEndingThreshold ? humanEndingNodeId : machineEndingNodeId;
     }
     
     public void ContinueDialogue()
     {
         if (currentNode == null || currentNode.lines == null)
         {
-            EndDialogue();
+            EndDialogue(false);
             return;
         }
 
@@ -217,7 +245,7 @@ public class DialogueManager : MonoBehaviour
         if (currentLineIndex >= currentNode.lines.Count)
         {
             // End of node
-            EndDialogue();
+            EndDialogue(true);
         }
         else
         {
@@ -225,8 +253,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
     
-    private void EndDialogue()
+    private void EndDialogue(bool completedNaturally)
     {
+        if (completedNaturally && currentDialogue != null && currentDialogue.completesIslandOnEnd && currentDialogue.completedIslandIndex >= 0)
+        {
+            GameManager.Instance?.CompleteStar(currentDialogue.completedIslandIndex);
+        }
+
         dialoguePanel.SetActive(false);
         choicePanel.SetActive(false);
         currentDialogue = null;

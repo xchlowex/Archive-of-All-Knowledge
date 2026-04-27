@@ -5,8 +5,14 @@
       "nodeId": "start",
       "lines": [
         {
-          "speakerName": "Aliveman",
-          "text": "Aliveman is sleeping and resting.",
+          "speakerName": "Dr. Thorne",
+          "text": "Don't be so scared, this exhibit is sleeping and resting.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": ". . .",
+          "text": "You don't want to disturb him, so you quietly observe him sleeping.",
           "hasChoice": false,
           "choices": []
         }
