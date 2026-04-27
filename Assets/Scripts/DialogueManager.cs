@@ -6,6 +6,8 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
+    private const string EvaluateHumanityNodeToken = "__EVALUATE_HUMANITY__";
+
     [Header("UI References")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI speakerText;
@@ -15,6 +17,11 @@ public class DialogueManager : MonoBehaviour
     
     [Header("Settings")]
     [SerializeField] private float textSpeed = 0.05f;
+
+    [Header("Ending Evaluation")]
+    [SerializeField] private int humanEndingThreshold = 0;
+    [SerializeField] private string humanEndingNodeId = "human";
+    [SerializeField] private string machineEndingNodeId = "machine";
     
     // State
     private DialogueData currentDialogue;
@@ -174,11 +181,20 @@ public class DialogueManager : MonoBehaviour
         foreach (Transform child in choicePanel.transform)
             Destroy(child.gameObject);
         choicePanel.SetActive(false);
-        
+
+        string resolvedNextNodeId = ResolveNextNodeId(choice.nextNodeId);
+
         // Move to next node if specified
-        if (!string.IsNullOrEmpty(choice.nextNodeId))
+        if (!string.IsNullOrEmpty(resolvedNextNodeId))
         {
-            currentNode = currentDialogue.nodes.Find(node => node.nodeId == choice.nextNodeId);
+            currentNode = currentDialogue.nodes.Find(node => node.nodeId == resolvedNextNodeId);
+            if (currentNode == null)
+            {
+                Debug.LogWarning($"Dialogue node '{resolvedNextNodeId}' was not found.");
+                EndDialogue();
+                return;
+            }
+
             currentLineIndex = 0;
             DisplayCurrentLine();
         }
@@ -186,6 +202,17 @@ public class DialogueManager : MonoBehaviour
         {
             EndDialogue();
         }
+    }
+
+    private string ResolveNextNodeId(string nextNodeId)
+    {
+        if (nextNodeId != EvaluateHumanityNodeToken)
+        {
+            return nextNodeId;
+        }
+
+        int humanityScore = GameManager.Instance != null ? GameManager.Instance.GetHumanityScore() : 0;
+        return humanityScore >= humanEndingThreshold ? humanEndingNodeId : machineEndingNodeId;
     }
     
     public void ContinueDialogue()

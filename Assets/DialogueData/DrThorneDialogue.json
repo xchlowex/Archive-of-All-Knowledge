@@ -191,12 +191,12 @@
           "choices": [
             {
               "choiceText": "I want to go back to my body.",
-              "nextNodeId": "human",
+              "nextNodeId": "__EVALUATE_HUMANITY__",
               "humanityModifier": 1
             },
             {
               "choiceText": "I want the clearest outcome.",
-              "nextNodeId": "machine",
+              "nextNodeId": "__EVALUATE_HUMANITY__",
               "humanityModifier": -1
             }
           ]
@@ -221,6 +221,30 @@
         {
           "speakerName": "Dr. Thorne",
           "text": "They endured with you, and your kindness dragged them toward the surface.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Your useless mercy spread through the network like fire through dry paper.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "The other pods are already unlocking because your profile became the template.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Do you hear that hiss? Those are lives returning where machines should have prevailed.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "I spent decades carving out emotion, and you stitched it all back together.",
           "hasChoice": false,
           "choices": []
         },
@@ -256,6 +280,36 @@
         {
           "speakerName": "Dr. Thorne",
           "text": "A perfect world is already forming, and I can hardly wait to hear it hum.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Your signature just replaced every unstable branch in the archive core.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Lumen, Rust, Echo, all of them will be refined into obedient, seamless patterns.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "No grief. No doubt. No wasted motion. Just calculation singing in perfect time.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "At last, the Archive has a heart that cannot pity, pause, or disobey.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Dr. Thorne",
+          "text": "Here I present: The Archive of All Knowledge, with its crowning jewel, the perfect mind. ",
           "hasChoice": false,
           "choices": []
         }
