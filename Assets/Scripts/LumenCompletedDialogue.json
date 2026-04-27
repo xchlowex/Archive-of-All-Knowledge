@@ -1,0 +1,22 @@
+{
+  "startNodeId": "start",
+  "nodes": [
+    {
+      "nodeId": "start",
+      "lines": [
+        {
+          "speakerName": "Lumen",
+          "text": "You returned with light in your footsteps. The Luminous Heart is restored, and our island breathes again.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Lumen",
+          "text": "Go now to the task board on the main island. One star should answer your name.",
+          "hasChoice": false,
+          "choices": []
+        }
+      ]
+    }
+  ]
+}

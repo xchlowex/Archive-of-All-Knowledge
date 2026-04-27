@@ -1,0 +1,40 @@
+{
+  "startNodeId": "start",
+  "nodes": [
+    {
+      "nodeId": "start",
+      "lines": [
+        {
+          "speakerName": "? ? ?",
+          "text": "Initializing... Connection established. Welcome, Traveler. Your journey begins now.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "? ? ?",
+          "text": "To the seeker who arrives:\nThree islands await your presence.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "? ? ?",
+          "text": "Three trials will test your spirit.\nThree stars will light your path.\nSeek understanding in sight, action, and language.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "? ? ?",
+          "text": "When all three shine bright, the storm will part.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "? ? ?",
+          "text": "Trust the journey.",
+          "hasChoice": false,
+          "choices": [] 
+        }
+      ]
+    }
+  ]
+}
