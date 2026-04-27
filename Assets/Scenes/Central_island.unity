@@ -3420,7 +3420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: NLP_island
   tutorialObject: {fileID: 701854478}
-  spawnPointName: NLP quest door
+  spawnPointName: NLP start door
 --- !u!212 &2044008008
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -63,7 +63,8 @@ public class DialogueManager : MonoBehaviour
         if (startNode.lines == null || startNode.lines.Count == 0)
         {
             Debug.LogWarning($"StartDialogue found start node '{dialogue.startNodeId}' but it has no lines.");
-            return;
+                EndDialogue(false);
+                return;
         }
 
         currentDialogue = dialogue;
@@ -78,7 +79,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentNode == null || currentNode.lines == null || currentLineIndex >= currentNode.lines.Count)
         {
-            EndDialogue();
+            EndDialogue(false);
             return;
         }
         
@@ -191,7 +192,7 @@ public class DialogueManager : MonoBehaviour
             if (currentNode == null)
             {
                 Debug.LogWarning($"Dialogue node '{resolvedNextNodeId}' was not found.");
-                EndDialogue();
+                EndDialogue(false);
                 return;
             }
 
@@ -200,7 +201,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            EndDialogue();
+            EndDialogue(false);
         }
     }
 
@@ -219,7 +220,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentNode == null || currentNode.lines == null)
         {
-            EndDialogue();
+            EndDialogue(false);
             return;
         }
 
@@ -244,7 +245,7 @@ public class DialogueManager : MonoBehaviour
         if (currentLineIndex >= currentNode.lines.Count)
         {
             // End of node
-            EndDialogue();
+            EndDialogue(true);
         }
         else
         {
@@ -252,8 +253,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
     
-    private void EndDialogue()
+    private void EndDialogue(bool completedNaturally)
     {
+        if (completedNaturally && currentDialogue != null && currentDialogue.completesIslandOnEnd && currentDialogue.completedIslandIndex >= 0)
+        {
+            GameManager.Instance?.CompleteStar(currentDialogue.completedIslandIndex);
+        }
+
         dialoguePanel.SetActive(false);
         choicePanel.SetActive(false);
         currentDialogue = null;

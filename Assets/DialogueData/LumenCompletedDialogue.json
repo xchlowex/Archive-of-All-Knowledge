@@ -1,4 +1,6 @@
 {
+  "completesIslandOnEnd": true,
+  "completedIslandIndex": 0,
   "startNodeId": "start",
   "nodes": [
     {
