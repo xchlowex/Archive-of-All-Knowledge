@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("Duplicate GameManager found and destroyed");
             Destroy(gameObject);
         }
     }

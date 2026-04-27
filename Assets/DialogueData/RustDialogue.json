@@ -6,7 +6,31 @@
       "lines": [
         {
           "speakerName": "Rust",
-          "text": "You look capable. Good. We don't get many visitors here on the Forge. This island tests everyone who arrives. Long ago, our ancestors built machines to help us—workers, protectors. Then something went wrong. Now they attack anything that moves. We've learned to survive, but newcomers need to prove they can handle themselves. Here's the deal: survive in the Gauntlet for five minutes. The machines will come in waves. You have five lives. Show me you can adapt, react, and endure. Do this, and you'll earn not just my respect, but something greater. Deal?",
+          "text": "You look capable. Good. We don't get many visitors here on the Forge. This island tests everyone who arrives.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Rust",
+          "text": "Long ago, our ancestors built machines to help us—workers, protectors. Then something went wrong. Now they attack anything that moves.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Rust",
+          "text": "We've learned to survive, but newcomers need to prove they can handle themselves.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Rust",
+          "text": "Here's the deal: survive in the Gauntlet for five minutes. The machines will come in waves.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "Rust",
+          "text": "You have five lives. Show me you can adapt, react, and endure. Do this, and you'll earn not just my respect, but something greater. Deal?",
           "hasChoice": true,
           "choices": [
             {

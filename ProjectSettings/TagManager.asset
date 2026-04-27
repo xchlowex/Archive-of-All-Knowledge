@@ -3,16 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Tilemap
+  - bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
-  - 
-  - 
+  - bullet
+  - pathfinder
   - 
   - 
   - 
@@ -55,4 +58,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1030327957
+    locked: 0
+  - name: UI
+    uniqueID: 2405601237
     locked: 0
