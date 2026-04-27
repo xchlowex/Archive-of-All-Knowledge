@@ -15,24 +15,15 @@ public class GlobalLightController : MonoBehaviour
 
     [Header("Change Settings")]
     [SerializeField] private float defaultIncreaseStep = 0.1f;
-    [SerializeField] private bool smoothTransition = true;
-    [SerializeField] private float transitionDuration = 0.35f;
-
-    private Coroutine runningTransition;
 
     public float CurrentIntensity => globalLight != null ? globalLight.intensity : -1f;
 
     private void Awake()
     {
-        if (globalLight == null)
-        {
-            globalLight = GetComponent<Light2D>();
-        }
+        ResolveLightReference();
 
         if (globalLight == null)
         {
-            Debug.LogError("GlobalLightController: No Light2D assigned.");
-            enabled = false;
             return;
         }
 
@@ -85,34 +76,37 @@ public class GlobalLightController : MonoBehaviour
             }
         }
 
-        if (!smoothTransition || transitionDuration <= 0f)
+        globalLight.intensity = targetIntensity;
+
+        if (debugLogs)
         {
-            globalLight.intensity = targetIntensity;
+            Debug.Log($"GlobalLightController applied intensity immediately. New intensity: {globalLight.intensity:F2}");
+        }
+    }
+
+    private void ResolveLightReference()
+    {
+        if (globalLight != null)
+        {
             return;
         }
 
-        if (runningTransition != null)
+        globalLight = GetComponent<Light2D>();
+
+        if (globalLight == null)
         {
-            StopCoroutine(runningTransition);
+            globalLight = GetComponentInChildren<Light2D>();
         }
 
-        runningTransition = StartCoroutine(AnimateIntensity(targetIntensity));
-    }
-
-    private System.Collections.IEnumerator AnimateIntensity(float target)
-    {
-        float start = globalLight.intensity;
-        float elapsed = 0f;
-
-        while (elapsed < transitionDuration)
+        if (globalLight == null)
         {
-            elapsed += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsed / transitionDuration);
-            globalLight.intensity = Mathf.Lerp(start, target, t);
-            yield return null;
+            globalLight = GetComponentInParent<Light2D>();
         }
 
-        globalLight.intensity = target;
-        runningTransition = null;
+        if (globalLight == null)
+        {
+            Debug.LogError("GlobalLightController: No Light2D assigned or found on this object, its children, or its parent.");
+            enabled = false;
+        }
     }
 }
