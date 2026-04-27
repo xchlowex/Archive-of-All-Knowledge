@@ -1,8 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class DialogueManager : MonoBehaviour
 {
@@ -255,7 +259,11 @@ public class DialogueManager : MonoBehaviour
     
     private void EndDialogue(bool completedNaturally)
     {
-        if (completedNaturally && currentDialogue != null && currentDialogue.completesIslandOnEnd && currentDialogue.completedIslandIndex >= 0)
+        bool shouldCompleteIsland = completedNaturally && currentDialogue != null && currentDialogue.completesIslandOnEnd && currentDialogue.completedIslandIndex >= 0;
+        bool shouldEndGame = completedNaturally && currentDialogue != null && currentDialogue.endsGameOnEnd;
+        string endGameSceneName = shouldEndGame ? currentDialogue.endGameSceneName : string.Empty;
+
+        if (shouldCompleteIsland)
         {
             GameManager.Instance?.CompleteStar(currentDialogue.completedIslandIndex);
         }
@@ -264,6 +272,26 @@ public class DialogueManager : MonoBehaviour
         choicePanel.SetActive(false);
         currentDialogue = null;
         currentNode = null;
+
+        if (shouldEndGame)
+        {
+            EndGame(endGameSceneName);
+        }
+    }
+
+    private void EndGame(string sceneName)
+    {
+        if (!string.IsNullOrWhiteSpace(sceneName))
+        {
+            SceneManager.LoadScene(sceneName);
+            return;
+        }
+
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
     
     private void Update()
