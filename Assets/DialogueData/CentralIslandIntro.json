@@ -24,7 +24,13 @@
         },
         {
           "speakerName": "? ? ?",
-          "text": "When all three shine bright, the storm will part.",
+          "text": "To the right, the island of sight. To the left, the island of action. down south, the island of language.",
+          "hasChoice": false,
+          "choices": []
+        },
+        {
+          "speakerName": "? ? ?",
+          "text": "When all three shine bright, the storm will part.\nThe path to the core will be open.",
           "hasChoice": false,
           "choices": []
         },
