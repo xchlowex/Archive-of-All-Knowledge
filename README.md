@@ -67,7 +67,9 @@ Main scene assets currently include:
 - Move: arrow keys
 - Interact with NPCs and doors: `E`
 - Continue dialogue: click/`space`
-- shoot bullets in Robotics island: click on mouse
+- Choose dialogue option: `click`
+- Shoot bullets in Robotics island minigame: `click` on bullet shoot direction 
+- Restart Robotics island minigame: `R`
 
 Notes:
 - movement is paused while dialogue is active.
