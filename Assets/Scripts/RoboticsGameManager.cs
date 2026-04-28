@@ -8,7 +8,7 @@ public class RoboticsGameManager : MonoBehaviour
 
     [Header("Game State")]
     public float gameTimer; // 30 second survival
-    private bool _isGameActive = false;
+    // private bool _isGameActive = false;
     private float _currentTime;
 
     [Header("Spawning")]
@@ -52,7 +52,7 @@ public class RoboticsGameManager : MonoBehaviour
     {
         // startGame
         // Reset everything for a fresh start
-        _isGameActive = true;
+        // _isGameActive = true;
         _currentTime = gameTimer;
         _spawnTimer = 0;
 
@@ -131,7 +131,7 @@ public class RoboticsGameManager : MonoBehaviour
     }
     public void EndGame(bool didWin)
     {
-        _isGameActive = false;
+        // _isGameActive = false;
         Time.timeScale = 0;
         
         if (!didWin)
