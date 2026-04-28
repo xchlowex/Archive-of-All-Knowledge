@@ -36,6 +36,4 @@ public class DialogueData : ScriptableObject
     public string startNodeId = "start";
     public bool completesIslandOnEnd;
     public int completedIslandIndex = -1;
-    public bool endsGameOnEnd;
-    public string endGameSceneName = "";
 }

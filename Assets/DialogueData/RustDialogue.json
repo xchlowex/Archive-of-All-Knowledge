@@ -6,7 +6,27 @@
       "lines": [
         {
           "speakerName": "Rust",
-          "text": "You look capable. Good. We don't get many visitors here on the Forge. This island tests everyone who arrives. Long ago, our ancestors built machines to help us—workers, protectors. Then something went wrong. Now they attack anything that moves. We've learned to survive, but newcomers need to prove they can handle themselves. Here's the deal: survive in the Gauntlet for five minutes. The machines will come in waves. You have five lives. Show me you can adapt, react, and endure. Do this, and you'll earn not just my respect, but something greater. Deal?",
+          "text": "You look capable. Good. We don't get many visitors here on the Forge.",
+          "hasChoice": false
+        },
+        {
+          "speakerName": "Rust",
+          "text": "This island tests everyone who arrives. Long ago, our ancestors built machines to help us—workers, protectors.",
+          "hasChoice": false
+        },
+        {
+          "speakerName": "Rust",
+          "text": "Then something went wrong. Now they attack anything that moves. We've learned to survive, but newcomers need to prove they can handle themselves.",
+          "hasChoice": false
+        },
+        {
+          "speakerName": "Rust",
+          "text": "Here's the deal: survive in the Gauntlet. The machines will come in waves. You have five lives. Show me you can adapt, react, and endure.",
+          "hasChoice": false
+        },
+        {
+          "speakerName": "System",
+          "text": "TUTORIAL: Use ARROW KEYS to move. CLICK your mouse to shoot bullets at the robots.",
           "hasChoice": true,
           "choices": [
             {

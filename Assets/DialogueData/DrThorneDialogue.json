@@ -1,6 +1,4 @@
 {
-  "endsGameOnEnd": true,
-  "endGameSceneName": "",
   "startNodeId": "start",
   "nodes": [
     {

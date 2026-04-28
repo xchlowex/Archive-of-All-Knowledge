@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Island_Robotics/Robotics_Island.unity
+    path: Assets/Scenes/Robotics_island.unity
     guid: 315cecdc593fb479aac5d9de1fe9afd6
   - enabled: 1
-    path: Assets/Island_Robotics/Battle_Arena.unity
+    path: Assets/Scenes/Battle_Arena.unity
     guid: 5fd09dbb680ed44a195c49f15303ed25
   - enabled: 1
     path: Assets/Scenes/Vision_island.unity
@@ -22,13 +22,16 @@ EditorBuildSettings:
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/Final_island.unity
-    guid: f8e6e2231234d0c409922ac27094e389
+    guid: 6e78ac7afdc584d26819655e5402002d
   - enabled: 1
     path: Assets/Scenes/NLP_island.unity
     guid: 02357c19e9301984eb7ccbac44bb0e62
   - enabled: 1
     path: Assets/Scenes/NLP_island_complete.unity
     guid: 34c902c3566ed3648ba0790cd45fa095
+  - enabled: 1
+    path: Assets/Scenes/Robotics_island_complete.unity
+    guid: d823e1d207cd4477bb088e5d0a80051f
   - enabled: 1
     path: Assets/Scenes/Vision_complete.unity
     guid: e7034091f2016f648b624fbdb0bc5eb6
