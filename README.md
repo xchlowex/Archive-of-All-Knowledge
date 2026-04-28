@@ -151,6 +151,27 @@ Spawn recovery is handled by `Assets/Scripts/PlayerSpawnHandler.cs`:
 `Assets/Scripts/IslandQuestCompletionTrigger.cs` can mark stars complete when the player enters a trigger volume.
 This will also be reflected on the sprite changes on the main island. (i.e. the stars will be lit up upon completing the main quest on the corresponding island)
 
+### 5) Robotics Island minigame state and progression
+`RoboticsGameManager`  is a scene-specific singleton that manages the survival combat mechanics:
+
+- `Timer` (gameTimer, _currentTime)
+
+- Minigame State (`_isGameActive`, `CompleteChallenge`)
+
+- Enemy Scaling (`spawnRate`, `spawnPoints`)
+
+Important methods in Assets/Scripts/RoboticsGameManager.cs:
+
+`StartGame()`
+
+`SpawnEnemy()`
+
+`EndGame(bool didWin)` (checks if win or gameOver)
+
+`LoadIslandScene()`
+
+`RestartGame()`
+
 ## Narrative Structure (High Level)
 
 - Prologue on a central island with a task board and three hints.
@@ -173,28 +194,7 @@ This will also be reflected on the sprite changes on the main island. (i.e. the 
 - `docs/` project documents, architecture, workflows
 - `ProjectSettings/` Unity project configuration
 - `Packages/` package manifest and lock
-
-### 5) Robotics Island minigame state and progression
-`RoboticsGameManager`  is a scene-specific singleton that manages the survival combat mechanics:
-
-- `Timer` (gameTimer, _currentTime)
-
-- Minigame State (`_isGameActive`, `CompleteChallenge`)
-
-- Enemy Scaling (`spawnRate`, `spawnPoints`)
-
-Important methods in Assets/Scripts/RoboticsGameManager.cs:
-
-`StartGame()`
-
-`SpawnEnemy()`
-
-`EndGame(bool didWin)` (checks if win or gameOver)
-
-`LoadIslandScene()`
-
-`RestartGame()`
-
+- 
 
 ## Appendix: Quick Start For Dialogue Authors
 
