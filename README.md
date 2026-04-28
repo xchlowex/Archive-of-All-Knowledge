@@ -46,6 +46,8 @@ Key packages (from `Packages/manifest.json`):
 
 ## How To Open and Run
 
+Only use the `main` branch.
+
 1. Open Unity Hub.
 2. Add this folder as a project:
    - `Archive-of-All-Knowledge`
@@ -60,7 +62,7 @@ Main scene assets currently include:
 - 2 scenes for NLP island
 - 1 scene for final island
 
-## Controls (Current)
+## Controls
 
 - Move: arrow keys
 - Interact with NPCs and doors: `E`
