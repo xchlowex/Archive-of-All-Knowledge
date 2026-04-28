@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/bullet - Copy.prefab.meta
+guid: 6e78ac7afdc584d26819655e5402002d
+PrefabImporter:
+========
 guid: f8e6e2231234d0c409922ac27094e389
 DefaultImporter:
+>>>>>>>> 7cb470f469b8feb53748d88d4af5ab6fe7dbfb9f:Assets/Scenes/Final_island.unity.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
