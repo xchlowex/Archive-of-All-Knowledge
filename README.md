@@ -2,15 +2,29 @@
 
 You, as the player, wake up on a deserted central island. The only thing you see is a board — “Archive of All Knowledge” with dim stars, and the only goal in your mind: light them up. There are other mysterious islands, each with a quest you have to complete. Besides these quests, there seems to be some other NPCs who are waiting for your help. Would you try to build connections to grasp even the smallest idea of what this world is about, or rush through your journey for your own escapefor the sake of efficiency ignore them? What awaits you after the stars are all lit up? 
 
-## Project Overview
+## Game Theme
 
-Archive of All Knowledge is structured around three core challenge islands:
+Archive of All Knowledge is a 2D RPG game structuring around a main story discussing the relationship between humanity and AI:
+- How AI is trained. This will be reflected by the 3 main quests the player has to complete, each corresponds to a domain of AI: Computer vision, robotics, NLP. Some people have technophobia because they don’t know how such amazing technology works.
+- How are humans different from AI. AI is trained to give high accuracy answers by billions of data, making them smart and logical all the time, giving appropriate suggestions and fast search results. On the other hand, humans will not always be logical and objective, but this is not a bad thing. Humans creates many things, embraces their imperfectness
 
-- Island of Sight (Vision): restore light in darkness.
-- Island of Action (Robotics/Forge): survive a timed combat gauntlet.
+## Gameplay
+
+To echo our game theme, the gameplay flows through a continuous plot together with its own minigame:
+- Island of Sight (Vision): restore light in a dark maze.
+- Island of Action (Robotics): survive a timed combat gauntlet.
 - Island of Language (NLP): solve logic and word puzzles.
+- along with 3 optional subquests, 1 on each island (dialogue-based)
+- An initially locked island, which the player can only enter when all 3 islands are completed. Here the ending will be presented.
 
-As each island is completed, a star is lit on the central task board. After all three stars are complete, the game transitions toward a final revelation and ending branch.
+As each island is completed, a star is lit on the central task board, progressing the story. 
+
+For each minigame, the player can only complete the island if they meet the success requirement. If not, they are required to repeat the minigame until they meet the success requirement.
+
+After all 3 islands are complete (signalized by the stars on the task board on the main island), the game transitions toward a final revelation and 2 completely different ending branches. 
+The stakes of the game is dependent on the subquest choices the player choose, the player will either unlock a good ending or a bad ending based on their choices.
+
+To unlock an ending, the player should finish all main qests on the 3 islands (subquests are optional) to enter the final island. Oncen the player ends the dialogue with the final island NPC, the game will be considered finish and tops immediately.
 
 The narrative arc and full story outline are documented in `Assets/Plot.txt`.
 
@@ -20,6 +34,8 @@ The narrative arc and full story outline are documented in `Assets/Plot.txt`.
 - Render pipeline: Universal Render Pipeline (URP) 2D
 - Input model: classic Unity input axes (`Horizontal`, `Vertical`) and key checks
 - Dialogue UI: TextMeshPro-based dialogue panel and choice buttons
+- Sprites: generated from Nano-banana
+- Music: Mubert & Suno v5.5
 
 Key packages (from `Packages/manifest.json`):
 
@@ -35,17 +51,14 @@ Key packages (from `Packages/manifest.json`):
    - `Archive-of-All-Knowledge`
 3. Make sure Unity `2022.3.62f3c1` is installed and selected.
 4. Open a playable scene from `Assets/Scenes/`.
-5. Press Play.
+5. Press Play. It should automatically take you to `Central_island.unity` no matter which scene you play.
 
 Main scene assets currently include:
-
-- `Central_island.unity`
-- `Vision_island.unity`
-- `Vision_quest.unity`
-- `Vision_complete.unity`
-- `NLP_island.unity`
-- `NLP_island_complete.unity`
-- `Final_island.unity`
+- 1 scene for main island
+- 3 scenes for vision island
+- 3 scenes for robotics island
+- 2 scenes for NLP island
+- 1 scene for final island
 
 ## Controls (Current)
 
@@ -53,7 +66,9 @@ Main scene assets currently include:
 - Interact with NPCs and doors: `E`
 - Continue dialogue: click/`space`
 
-Note: movement is paused while dialogue is active.
+Notes:
+- movement is paused while dialogue is active.
+- Every interactable object has a speech bubble when entering its trigger area, hinting the player that the object is interactable. (Including NPCs, doors, special objects)
 
 ## Core Gameplay Systems
 
@@ -112,6 +127,10 @@ Events:
 
 `TaskBoardStarsController` listens for star updates and toggles lit/unlit star visuals.
 
+Notes:
+- The `HumanityScore` will affect which ending the player receives, and is modified by exploring subquests and the final choice.
+- There are currently 2 endings
+
 ### 3) Scene Transition and Spawn Positioning
 
 Door travel is handled by `Assets/Scripts/DoorTeleport.cs`:
@@ -127,6 +146,7 @@ Spawn recovery is handled by `Assets/Scripts/PlayerSpawnHandler.cs`:
 ### 4) Quest Completion Triggering
 
 `Assets/Scripts/IslandQuestCompletionTrigger.cs` can mark stars complete when the player enters a trigger volume.
+This will also be reflected on the sprite changes on the main island. (i.e. the stars will be lit up upon completing the main quest on the corresponding island)
 
 ## Narrative Structure (High Level)
 
@@ -151,16 +171,8 @@ Spawn recovery is handled by `Assets/Scripts/PlayerSpawnHandler.cs`:
 - `ProjectSettings/` Unity project configuration
 - `Packages/` package manifest and lock
 
-## Team Workflow Context
 
-The repository includes substantial process documentation in `docs/`, including:
-
-- `docs/WORKFLOW-GUIDE.md`
-- `docs/COLLABORATIVE-DESIGN-PRINCIPLE.md`
-
-These files describe the intended collaborative design and development process around this game project.
-
-## Quick Start For Dialogue Authors
+## Appendix: Quick Start For Dialogue Authors
 
 1. Create or edit a JSON file in `Assets/DialogueData/`.
 2. Keep the schema compatible with `DialogueData` runtime parsing.
@@ -170,5 +182,4 @@ These files describe the intended collaborative design and development process a
 
 ## License and Ownership
 
-No license file is currently defined at the repository root.
-If this project is intended for distribution, add a license file and update this section.
+All Rights Reserved.
