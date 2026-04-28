@@ -7,6 +7,8 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     private const string EvaluateHumanityNodeToken = "__EVALUATE_HUMANITY__";
+    private static readonly HashSet<string> consumedDialogueIds = new HashSet<string>();
+    private static readonly HashSet<int> consumedDialogueInstances = new HashSet<int>();
 
     [Header("UI References")]
     [SerializeField] private GameObject dialoguePanel;
@@ -53,6 +55,12 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        if (dialogue.consumeAfterFirstUse && IsDialogueConsumed(dialogue))
+        {
+            Debug.Log($"Dialogue '{GetDialogueLabel(dialogue)}' has already been consumed.");
+            return;
+        }
+
         DialogueNode startNode = dialogue.nodes.Find(node => node.nodeId == dialogue.startNodeId);
         if (startNode == null)
         {
@@ -70,9 +78,55 @@ public class DialogueManager : MonoBehaviour
         currentDialogue = dialogue;
         currentNode = startNode;
         currentLineIndex = 0;
+
+        if (dialogue.consumeAfterFirstUse)
+        {
+            MarkDialogueConsumed(dialogue);
+        }
         
         dialoguePanel.SetActive(true);
         DisplayCurrentLine();
+    }
+
+    private static bool IsDialogueConsumed(DialogueData dialogue)
+    {
+        if (!dialogue.consumeAfterFirstUse)
+        {
+            return false;
+        }
+
+        if (!string.IsNullOrWhiteSpace(dialogue.dialogueId))
+        {
+            return consumedDialogueIds.Contains(dialogue.dialogueId);
+        }
+
+        return consumedDialogueInstances.Contains(dialogue.GetInstanceID());
+    }
+
+    private static void MarkDialogueConsumed(DialogueData dialogue)
+    {
+        if (!dialogue.consumeAfterFirstUse)
+        {
+            return;
+        }
+
+        if (!string.IsNullOrWhiteSpace(dialogue.dialogueId))
+        {
+            consumedDialogueIds.Add(dialogue.dialogueId);
+            return;
+        }
+
+        consumedDialogueInstances.Add(dialogue.GetInstanceID());
+    }
+
+    private static string GetDialogueLabel(DialogueData dialogue)
+    {
+        if (!string.IsNullOrWhiteSpace(dialogue.dialogueId))
+        {
+            return dialogue.dialogueId;
+        }
+
+        return dialogue.name;
     }
     
     private void DisplayCurrentLine()
@@ -255,15 +309,33 @@ public class DialogueManager : MonoBehaviour
     
     private void EndDialogue(bool completedNaturally)
     {
-        if (completedNaturally && currentDialogue != null && currentDialogue.completesIslandOnEnd && currentDialogue.completedIslandIndex >= 0)
+        DialogueData completedDialogue = currentDialogue;
+
+        if (completedNaturally && completedDialogue != null && completedDialogue.completesIslandOnEnd && completedDialogue.completedIslandIndex >= 0)
         {
-            GameManager.Instance?.CompleteStar(currentDialogue.completedIslandIndex);
+            GameManager.Instance?.CompleteStar(completedDialogue.completedIslandIndex);
         }
 
         dialoguePanel.SetActive(false);
         choicePanel.SetActive(false);
         currentDialogue = null;
         currentNode = null;
+
+        if (completedNaturally && completedDialogue != null && completedDialogue.endsGameOnEnd)
+        {
+            EndGame();
+        }
+    }
+
+    private void EndGame()
+    {
+        Debug.Log("Dialogue ended the game.");
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
     
     private void Update()

@@ -1,5 +1,7 @@
 {
   "startNodeId": "start",
+  "dialogueId": "rabbit-subquest",
+  "consumeAfterFirstUse": true,
   "nodes": [
     {
       "nodeId": "start",

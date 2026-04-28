@@ -32,7 +32,7 @@
             {
               "choiceText": "I’m ready. Let me in.",
               "nextNodeId": "accepted",
-              "humanityModifier": 1
+              "humanityModifier": 0
             },
             {
               "choiceText": "Not yet. I need to prepare.",

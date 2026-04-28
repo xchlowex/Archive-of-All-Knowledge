@@ -12,6 +12,9 @@ Use this guide to implement and test a full NPC conversation flow:
 
 Each file should follow this shape:
 - `startNodeId`
+- `dialogueId` for one-shot tracking across scene reloads
+- `consumeAfterFirstUse` to make a dialogue one-shot
+- `endsGameOnEnd` to end the game after the dialogue finishes
 - `nodes` (array)
 - each node: `nodeId`, `lines`
 - each line: `speakerName`, `text`, `hasChoice`, `choices`

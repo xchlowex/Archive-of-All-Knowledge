@@ -24,7 +24,7 @@
             {
               "choiceText": "Yes. I’ll help untangle the puzzles.",
               "nextNodeId": "accepted",
-              "humanityModifier": 1
+              "humanityModifier": 0
             },
             {
               "choiceText": "I’d rather not right now.",

@@ -1,5 +1,8 @@
 {
   "startNodeId": "start",
+  "dialogueId": "dr-thorne-final",
+  "consumeAfterFirstUse": true,
+  "endsGameOnEnd": true,
   "nodes": [
     {
       "nodeId": "start",

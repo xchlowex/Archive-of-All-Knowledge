@@ -34,6 +34,9 @@ public class DialogueData : ScriptableObject
 {
     public List<DialogueNode> nodes;
     public string startNodeId = "start";
+    public string dialogueId;
+    public bool consumeAfterFirstUse;
+    public bool endsGameOnEnd;
     public bool completesIslandOnEnd;
     public int completedIslandIndex = -1;
 }

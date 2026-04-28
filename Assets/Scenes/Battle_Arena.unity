@@ -146,9 +146,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Win Text (TMP)
       objectReference: {fileID: 0}
+    - target: {fileID: 3582252830979765600, guid: eba81e79b559a0040ba8ae296b6ef861, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 80069733}
+    - target: {fileID: 3582252830979765600, guid: eba81e79b559a0040ba8ae296b6ef861, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3582252830979765600, guid: eba81e79b559a0040ba8ae296b6ef861, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3916009958525803953, guid: eba81e79b559a0040ba8ae296b6ef861, type: 3}
       propertyPath: textComponent
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174079627482806908, guid: eba81e79b559a0040ba8ae296b6ef861, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6515591463833965148, guid: eba81e79b559a0040ba8ae296b6ef861, type: 3}
       propertyPath: m_Name
@@ -210,6 +226,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8777032541663113790, guid: eba81e79b559a0040ba8ae296b6ef861, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8777032541663113790, guid: eba81e79b559a0040ba8ae296b6ef861, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8777032541663113790, guid: eba81e79b559a0040ba8ae296b6ef861, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8777032541663113790, guid: eba81e79b559a0040ba8ae296b6ef861, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8777032541663113790, guid: eba81e79b559a0040ba8ae296b6ef861, type: 3}
@@ -5586,8 +5614,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -736.25415, y: 568.7133}
-  m_SizeDelta: {x: -1472.5083, y: -1137.4268}
+  m_AnchoredPosition: {x: -725.069, y: 440.56}
+  m_SizeDelta: {x: -1450.148, y: -881.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1401448675
 MonoBehaviour:
@@ -6878,8 +6906,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 737.708, y: 568.71}
-  m_SizeDelta: {x: -1475.4109, y: -1137.4}
+  m_AnchoredPosition: {x: 682.26, y: 440.56}
+  m_SizeDelta: {x: -1364.512, y: -881.128}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1967231434
 MonoBehaviour:
@@ -8479,7 +8507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8786158778498987049, guid: 62930dcd92b804216b0cab9b8af2cd90, type: 3}
       propertyPath: m_margin.x
-      value: 17.065811
+      value: 17.065933
       objectReference: {fileID: 0}
     - target: {fileID: 8786158778498987049, guid: 62930dcd92b804216b0cab9b8af2cd90, type: 3}
       propertyPath: m_margin.z

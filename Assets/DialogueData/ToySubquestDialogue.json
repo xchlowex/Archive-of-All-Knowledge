@@ -1,5 +1,7 @@
 {
   "startNodeId": "start",
+  "dialogueId": "toy-subquest",
+  "consumeAfterFirstUse": true,
   "nodes": [
     {
       "nodeId": "start",

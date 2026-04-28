@@ -1,5 +1,7 @@
 {
   "startNodeId": "start",
+  "dialogueId": "old-man-subquest",
+  "consumeAfterFirstUse": true,
   "nodes": [
     {
       "nodeId": "start",

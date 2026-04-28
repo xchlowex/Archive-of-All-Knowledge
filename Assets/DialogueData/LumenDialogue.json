@@ -30,7 +30,7 @@
             {
               "choiceText": "I will help find the Luminous Heart.",
               "nextNodeId": "accepted",
-              "humanityModifier": 1
+              "humanityModifier": 0
             },
             {
               "choiceText": "Not yet. I need more time.",
