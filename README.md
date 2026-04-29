@@ -28,6 +28,13 @@ To unlock an ending, the player should finish all main qests on the 3 islands (s
 
 The narrative arc and full story outline are documented in `Assets/Plot.txt`.
 
+## Narrative Structure (High Level)
+
+- Prologue on a central island with a task board and three hints.
+- Three domain islands test sight, action, and language.
+- Optional side choices influence the hidden humanity direction.
+- Final island reveals the ending and branches toward different outcomes.
+
 ## Engine and Tech Stack
 
 - Unity version: `2022.3.62f3c1`
@@ -174,18 +181,6 @@ Important methods in Assets/Scripts/RoboticsGameManager.cs:
 
 `RestartGame()`
 
-## Narrative Structure (High Level)
-
-- Prologue on a central island with a task board and three hints.
-- Three domain islands test sight, action, and language.
-- Optional side choices influence the hidden humanity direction.
-- Final island reveals the ending and branches toward different outcomes.
-
-## Current Development Notes
-
-- Star completion logging exists for "all stars complete" in `GameManager`.
-- Final island unlock behavior is currently marked by comment and may require additional implementation depending on desired world/scene gating logic.
-- Dialogue pipeline already supports JSON-first authoring and branch-driven progression.
 
 ## Repository Structure (Important Folders)
 
